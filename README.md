@@ -5,8 +5,8 @@
     </td>
     <td valign="top">
       <h1>gigBuddy</h1>
-      <p><strong>The ultimate real-time live music dashboard.</strong><br/>
-      <em>Sync setlists, lyrics, and chords, and control Spotify/YouTube Music playback directly from the stage.</em></p>
+      <p><strong>Real-time music dashboard</strong><br/>
+      <em>Synchronizes setlists, lyrics, and chords while controlling Spotify and YouTube Music playback.</em></p>
       <p>
         <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue" alt="License Apache 2.0"></a>
         <img src="https://img.shields.io/badge/status-development-orange" alt="Status">
@@ -18,19 +18,18 @@
 
 ---
 
-## ⚡ Superpowers
+## Features
 
-- **Real-Time Sync:** Synchronized setlists, lyrics, and chords across all band members' devices.
-- **Media Bridge:** Direct remote control for Spotify and YouTube Music from the dashboard.
-- **PWA Ready:** Installable on Desktop, Tablet, and Mobile for a native experience.
-- **Offline Resilient:** Access cached stage data even when the venue Wi-Fi fails.
-- **Stage-Optimized:** High-contrast, touch-friendly UI designed for live performance.
+- **Sync:** Real-time setlist, lyric, and chord synchronization across devices.
+- **Media Control:** Direct Spotify and YouTube Music playback control from the interface.
+- **Access:** Offline support for cached stage data.
+- **Interface:** High-contrast, touch-optimized UI for live performance.
 
 ---
 
-## 📖 Documentation
+## Documentation
 
-For a comprehensive technical breakdown, architectural ADRs, and operational guides, visit our official **[Wiki](docs/wiki/index.md)**.
+The **[Wiki](docs/wiki/index.md)** contains technical specifications, architectural ADRs, and guides.
 
 *   **[Data Schema](docs/wiki/schema.json)**
 *   **[Contributing Guide](docs/wiki/CONTRIBUTING.md)**
@@ -38,15 +37,14 @@ For a comprehensive technical breakdown, architectural ADRs, and operational gui
 
 ---
 
-## 🚀 Getting Started
+## Installation
 
 ### Prerequisites
-- Node.js (v18 or higher)
-- A Firebase Project
-- (Optional) Spotify Developer Account for Spotify integration
-- (Optional) Google Cloud Project for YouTube integration
+- Node.js (v18+).
+- Firebase Project.
+- (Optional) Spotify and YouTube developer credentials.
 
-### Setup Instructions
+### Setup
 
 1. **Clone the repository:**
    ```bash
@@ -60,27 +58,22 @@ For a comprehensive technical breakdown, architectural ADRs, and operational gui
    ```
 
 3. **Configure Environment Variables:**
-   - Copy `.env.example` to `.env.local`:
-     ```bash
-     cp .env.example .env.local
-     ```
-   - Fill in your credentials in `.env.local`. You will need:
-     - **Firebase**: Create a project at [Firebase Console](https://console.firebase.google.com/). Enable Authentication (Google & Anonymous) and Firestore.
-     - **Spotify**: Create an app at [Spotify Developer Dashboard](https://developer.spotify.com/dashboard).
-     - **YouTube**: Get an API Key from [Google Cloud Console](https://console.cloud.google.com/).
+   - Copy `.env.example` to `.env.local`.
+   - Add Firebase, Spotify, and YouTube credentials.
 
-4. **Firebase Rules:**
-   - Use the provided `firestore.rules` and `firebase-blueprint.json` (as a guide for the database structure) to set up your Firestore security rules and initial data.
+4. **Initialize Firebase:**
+   - Configure Firestore security rules using `firestore.rules`.
+   - Set up initial data with `firebase-blueprint.json`.
 
-5. **Run the app locally:**
+5. **Execute Locally:**
    ```bash
    npm run dev
    ```
 
-## 🛠️ Deployment
+## Deployment
 
-This app is ready to be deployed to platforms like Vercel, Netlify, or Firebase Hosting. Ensure you set the same environment variables from `.env.local` in your deployment platform's settings.
+Deploy the application to Vercel, Netlify, or Firebase Hosting. Ensure environment variables are configured in the deployment platform.
 
-## 📄 License
+## License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+Apache License 2.0. See [LICENSE](LICENSE).
