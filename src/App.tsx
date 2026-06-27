@@ -64,6 +64,8 @@ import { GlobalSettingsView } from "./components/GlobalSettingsView";
 import { UserConfigView } from "./components/UserConfigView";
 import { BandConfigView } from "./components/BandConfigView";
 import { SetlistReorderItem } from "./components/SetlistReorderItem";
+import { useTheme } from "./hooks/useTheme";
+import { useStageSettings } from "./hooks/useStageSettings";
 // Playback Types
 interface MediaSource {
   type: "spotify" | "youtube" | "none";
@@ -140,118 +142,34 @@ export default function App() {
 
   const [pendingSyncs, setPendingSyncs] = useState(0); // test edit
   const [isEditing, setIsEditing] = useState(false);
-  const [textSizeMultiplier, setTextSizeMultiplier] = useState(() => {
-    const cached = localStorage.getItem("gigbuddy_text_size");
-    return cached ? parseFloat(cached) : 1;
-  });
-  const [isTransportFloating, setIsTransportFloating] = useState(() => {
-    const cached = localStorage.getItem("gigbuddy_transport_floating");
-    return cached === "true";
-  });
-  const [isYouTubeDocked, setIsYouTubeDocked] = useState(() => {
-    const cached = localStorage.getItem("gigbuddy_youtube_docked");
-    return cached === "true";
-  });
 
-  const [fontFamily, setFontFamily] = useState(() => {
-    return localStorage.getItem("gigbuddy_font_family") || "sans";
-  });
+  const {
+    globalTheme,
+    setGlobalTheme,
+    globalMode,
+    setGlobalMode,
+  } = useTheme();
 
-  const [chordBackground, setChordBackground] = useState(() => {
-    return localStorage.getItem("gigbuddy_chord_bg") || "none";
-  });
-
-  useEffect(() => {
-    localStorage.setItem("gigbuddy_font_family", fontFamily);
-  }, [fontFamily]);
-
-  useEffect(() => {
-    localStorage.setItem("gigbuddy_chord_bg", chordBackground);
-  }, [chordBackground]);
+  const {
+    textSizeMultiplier,
+    setTextSizeMultiplier,
+    isTransportFloating,
+    setIsTransportFloating,
+    isYouTubeDocked,
+    setIsYouTubeDocked,
+    fontFamily,
+    setFontFamily,
+    chordBackground,
+    setChordBackground,
+    stageLayout,
+    setStageLayout,
+    stageVisibility,
+    setStageVisibility,
+  } = useStageSettings();
 
   const [appView, setAppView] = useState<
     "main" | "userConfig" | "bandConfig" | "globalSettings"
   >("main");
-  const [globalTheme, setGlobalTheme] = useState<
-    | "brand-tropic-vibes"
-    | "brand-mango"
-    | "brand-balandra"
-    | "brand-playa"
-    | "brand-pitahaya"
-  >(() => {
-    const cached = localStorage.getItem("gigbuddy_global_theme");
-    return (cached as any) || "brand-tropic-vibes";
-  });
-
-  const [globalMode, setGlobalMode] = useState<"dark" | "light">(() => {
-    const cached = localStorage.getItem("gigbuddy_global_mode");
-    return (cached as any) || "dark";
-  });
-
-  const [stageLayout, setStageLayout] = useState<string[]>(() => {
-    const cached = localStorage.getItem("gigbuddy_stage_layout");
-    return cached
-      ? JSON.parse(cached)
-      : ["header", "performance_notes", "attachments", "lyrics"];
-  });
-
-  const [stageVisibility, setStageVisibility] = useState<
-    Record<string, boolean>
-  >(() => {
-    const cached = localStorage.getItem("gigbuddy_stage_visibility");
-    return cached
-      ? JSON.parse(cached)
-      : {
-          header: true,
-          performance_notes: true,
-          attachments: true,
-          lyrics: true,
-        };
-  });
-
-  useEffect(() => {
-    localStorage.setItem("gigbuddy_stage_layout", JSON.stringify(stageLayout));
-  }, [stageLayout]);
-
-  useEffect(() => {
-    localStorage.setItem(
-      "gigbuddy_stage_visibility",
-      JSON.stringify(stageVisibility),
-    );
-  }, [stageVisibility]);
-
-  // Apply theme to html element
-  useEffect(() => {
-    document.documentElement.classList.remove(
-      "brand-tropic-vibes",
-      "brand-mango",
-      "brand-balandra",
-      "brand-playa",
-      "brand-pitahaya",
-    );
-    document.documentElement.classList.add(globalTheme);
-    localStorage.setItem("gigbuddy_global_theme", globalTheme);
-  }, [globalTheme]);
-
-  useEffect(() => {
-    document.documentElement.setAttribute("data-mode", globalMode);
-    localStorage.setItem("gigbuddy_global_mode", globalMode);
-  }, [globalMode]);
-
-  useEffect(() => {
-    localStorage.setItem("gigbuddy_text_size", textSizeMultiplier.toString());
-  }, [textSizeMultiplier]);
-
-  useEffect(() => {
-    localStorage.setItem(
-      "gigbuddy_transport_floating",
-      isTransportFloating.toString(),
-    );
-  }, [isTransportFloating]);
-
-  useEffect(() => {
-    localStorage.setItem("gigbuddy_youtube_docked", isYouTubeDocked.toString());
-  }, [isYouTubeDocked]);
 
   const [isLiveSyncEnabled, setIsLiveSyncEnabled] = useState(false);
   const [bandData, setBandData] = useState<Band | null>(null);
