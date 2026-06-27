@@ -1,0 +1,942 @@
+[
+  {
+    "title": "De Música Ligera",
+    "artist": "Soda Stereo",
+    "key": "Bm",
+    "bpm": 126,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "De aquel amor de música ligera",
+            "chords": [
+              {
+                "chord": "Bm",
+                "position": 0
+              },
+              {
+                "chord": "G",
+                "position": 15
+              },
+              {
+                "chord": "D",
+                "position": 25
+              },
+              {
+                "chord": "A",
+                "position": 32
+              }
+            ]
+          },
+          {
+            "text": "Nada nos libra, nada más queda",
+            "chords": [
+              {
+                "chord": "Bm",
+                "position": 0
+              },
+              {
+                "chord": "G",
+                "position": 15
+              },
+              {
+                "chord": "D",
+                "position": 25
+              },
+              {
+                "chord": "A",
+                "position": 32
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Lamento Boliviano",
+    "artist": "Enanitos Verdes",
+    "key": "Em",
+    "bpm": 120,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Y yo estoy aquí, borracho y loco",
+            "chords": [
+              {
+                "chord": "Em",
+                "position": 0
+              },
+              {
+                "chord": "Bm",
+                "position": 15
+              }
+            ]
+          },
+          {
+            "text": "Y mi corazón idiota siempre brillará",
+            "chords": [
+              {
+                "chord": "Am",
+                "position": 0
+              },
+              {
+                "chord": "Em",
+                "position": 20
+              },
+              {
+                "chord": "B7",
+                "position": 30
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Persiana Americana",
+    "artist": "Soda Stereo",
+    "key": "Dm",
+    "bpm": 120,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Tus ropas caen lentamente",
+            "chords": [
+              {
+                "chord": "F",
+                "position": 0
+              },
+              {
+                "chord": "C",
+                "position": 10
+              },
+              {
+                "chord": "G",
+                "position": 20
+              }
+            ]
+          },
+          {
+            "text": "Soy un espía, un espectador",
+            "chords": [
+              {
+                "chord": "Am",
+                "position": 0
+              },
+              {
+                "chord": "G",
+                "position": 15
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "La Flaca",
+    "artist": "Jarabe de Palo",
+    "key": "Am",
+    "bpm": 96,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Por un beso de la flaca daría lo que fuera",
+            "chords": [
+              {
+                "chord": "Am",
+                "position": 0
+              },
+              {
+                "chord": "E",
+                "position": 20
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Clavado en un Bar",
+    "artist": "Maná",
+    "key": "Cm",
+    "bpm": 140,
+    "sections": [
+      {
+        "title": "Intro",
+        "lines": [
+          {
+            "text": "Estoy clavado, estoy herido",
+            "chords": [
+              {
+                "chord": "Cm",
+                "position": 0
+              },
+              {
+                "chord": "Ab",
+                "position": 15
+              },
+              {
+                "chord": "Bb",
+                "position": 25
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Afuera",
+    "artist": "Caifanes",
+    "key": "Em",
+    "bpm": 115,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Afuera, afuera tú no existes",
+            "chords": [
+              {
+                "chord": "C",
+                "position": 0
+              },
+              {
+                "chord": "D",
+                "position": 10
+              },
+              {
+                "chord": "Em",
+                "position": 20
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Rayando el Sol",
+    "artist": "Maná",
+    "key": "G",
+    "bpm": 80,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Rayando el sol, desesperación",
+            "chords": [
+              {
+                "chord": "G",
+                "position": 0
+              },
+              {
+                "chord": "D",
+                "position": 12
+              },
+              {
+                "chord": "C",
+                "position": 25
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "La Guitarra",
+    "artist": "Los Auténticos Decadentes",
+    "key": "G",
+    "bpm": 150,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Porque yo no quiero trabajar",
+            "chords": [
+              {
+                "chord": "G",
+                "position": 0
+              },
+              {
+                "chord": "C",
+                "position": 15
+              },
+              {
+                "chord": "D",
+                "position": 25
+              }
+            ]
+          },
+          {
+            "text": "No quiero ir a estudiar",
+            "chords": [
+              {
+                "chord": "G",
+                "position": 0
+              },
+              {
+                "chord": "C",
+                "position": 15
+              },
+              {
+                "chord": "D",
+                "position": 25
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Matador",
+    "artist": "Los Fabulosos Cadillacs",
+    "key": "Dm",
+    "bpm": 135,
+    "sections": [
+      {
+        "title": "Intro",
+        "lines": [
+          {
+            "text": "Te están buscando, Matador!",
+            "chords": [
+              {
+                "chord": "Dm",
+                "position": 0
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Mil Horas",
+    "artist": "Los Abuelos de la Nada",
+    "key": "C",
+    "bpm": 124,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Hace frío y estoy esperando en la calle",
+            "chords": [
+              {
+                "chord": "C",
+                "position": 0
+              },
+              {
+                "chord": "Am",
+                "position": 20
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Sin Documentos",
+    "artist": "Los Rodríguez",
+    "key": "Am",
+    "bpm": 128,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Porque quiero arrebatarnos el corazón",
+            "chords": [
+              {
+                "chord": "Am",
+                "position": 0
+              },
+              {
+                "chord": "F",
+                "position": 20
+              },
+              {
+                "chord": "G",
+                "position": 30
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Triste Canción",
+    "artist": "El Tri",
+    "key": "G",
+    "bpm": 110,
+    "sections": [
+      {
+        "title": "Intro",
+        "lines": [
+          {
+            "text": "Él la amaba tanto que no podía creer",
+            "chords": [
+              {
+                "chord": "G",
+                "position": 0
+              },
+              {
+                "chord": "C",
+                "position": 15
+              },
+              {
+                "chord": "D",
+                "position": 25
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "La Célula que Explota",
+    "artist": "Caifanes",
+    "key": "C",
+    "bpm": 90,
+    "sections": [
+      {
+        "title": "Intro",
+        "lines": [
+          {
+            "text": "Hay veces que no sé qué me pasa",
+            "chords": [
+              {
+                "chord": "C",
+                "position": 0
+              },
+              {
+                "chord": "G",
+                "position": 10
+              },
+              {
+                "chord": "Am",
+                "position": 20
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Kumbala",
+    "artist": "Maldita Vecindad",
+    "key": "Cm",
+    "bpm": 85,
+    "sections": [
+      {
+        "title": "Intro",
+        "lines": [
+          {
+            "text": "En la oscuridad del Kumbala",
+            "chords": [
+              {
+                "chord": "Cm",
+                "position": 0
+              },
+              {
+                "chord": "G",
+                "position": 20
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Ingrata",
+    "artist": "Café Tacvba",
+    "key": "A",
+    "bpm": 160,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Ingrata, no me digas que me quieres",
+            "chords": [
+              {
+                "chord": "A",
+                "position": 0
+              },
+              {
+                "chord": "E",
+                "position": 20
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Flaca",
+    "artist": "Andrés Calamaro",
+    "key": "G",
+    "bpm": 92,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Flaca, no me claves tus puñales",
+            "chords": [
+              {
+                "chord": "G",
+                "position": 0
+              },
+              {
+                "chord": "B7",
+                "position": 10
+              },
+              {
+                "chord": "Em",
+                "position": 20
+              },
+              {
+                "chord": "C",
+                "position": 30
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Tren al Sur",
+    "artist": "Los Prisioneros",
+    "key": "A",
+    "bpm": 130,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Siento el vapor de un tren al sur",
+            "chords": [
+              {
+                "chord": "A",
+                "position": 0
+              },
+              {
+                "chord": "D",
+                "position": 15
+              },
+              {
+                "chord": "E",
+                "position": 25
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Oye Mi Amor",
+    "artist": "Maná",
+    "key": "Bm",
+    "bpm": 125,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Oye mi amor, no me digas que no",
+            "chords": [
+              {
+                "chord": "Bm",
+                "position": 0
+              },
+              {
+                "chord": "A",
+                "position": 15
+              },
+              {
+                "chord": "G",
+                "position": 25
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "El Baile y el Salón",
+    "artist": "Café Tacvba",
+    "key": "G",
+    "bpm": 120,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Y así bailar, y así bailar",
+            "chords": [
+              {
+                "chord": "G",
+                "position": 0
+              },
+              {
+                "chord": "D",
+                "position": 15
+              },
+              {
+                "chord": "C",
+                "position": 25
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Cuando Pase el Temblor",
+    "artist": "Soda Stereo",
+    "key": "Em",
+    "bpm": 125,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Yo caminaré entre las piedras",
+            "chords": [
+              {
+                "chord": "Em",
+                "position": 0
+              },
+              {
+                "chord": "C",
+                "position": 15
+              },
+              {
+                "chord": "D",
+                "position": 25
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Loco",
+    "artist": "Los Auténticos Decadentes",
+    "key": "G",
+    "bpm": 120,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Loco, por tu forma de ser",
+            "chords": [
+              {
+                "chord": "G",
+                "position": 0
+              },
+              {
+                "chord": "D",
+                "position": 10
+              },
+              {
+                "chord": "Em",
+                "position": 20
+              },
+              {
+                "chord": "C",
+                "position": 30
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Amor",
+    "artist": "Los Auténticos Decadentes",
+    "key": "A",
+    "bpm": 128,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Amor, amor, amor, amor",
+            "chords": [
+              {
+                "chord": "A",
+                "position": 0
+              },
+              {
+                "chord": "E",
+                "position": 10
+              },
+              {
+                "chord": "F#m",
+                "position": 20
+              },
+              {
+                "chord": "D",
+                "position": 30
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Viento",
+    "artist": "Caifanes",
+    "key": "Em",
+    "bpm": 110,
+    "sections": [
+      {
+        "title": "Intro",
+        "lines": [
+          {
+            "text": "Préstame tu peine y péiname el alma",
+            "chords": [
+              {
+                "chord": "Em",
+                "position": 0
+              },
+              {
+                "chord": "C",
+                "position": 20
+              },
+              {
+                "chord": "D",
+                "position": 30
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Eres",
+    "artist": "Café Tacvba",
+    "key": "D",
+    "bpm": 86,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Eres lo que más quiero en este mundo",
+            "chords": [
+              {
+                "chord": "D",
+                "position": 0
+              },
+              {
+                "chord": "A",
+                "position": 10
+              },
+              {
+                "chord": "Bm",
+                "position": 20
+              },
+              {
+                "chord": "G",
+                "position": 30
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Chilanga Banda",
+    "artist": "Café Tacvba",
+    "key": "E",
+    "bpm": 90,
+    "sections": [
+      {
+        "title": "Intro",
+        "lines": [
+          {
+            "text": "Pachucos, cholos y chundos",
+            "chords": [
+              {
+                "chord": "E",
+                "position": 0
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Pachuco",
+    "artist": "Maldita Vecindad",
+    "key": "Em",
+    "bpm": 155,
+    "sections": [
+      {
+        "title": "Intro",
+        "lines": [
+          {
+            "text": "Pachuuuuuuco!",
+            "chords": [
+              {
+                "chord": "Em",
+                "position": 0
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Bolero Falaz",
+    "artist": "Aterciopelados",
+    "key": "Am",
+    "bpm": 110,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "Te dije no más, y te cagaste de risa",
+            "chords": [
+              {
+                "chord": "Am",
+                "position": 0
+              },
+              {
+                "chord": "F",
+                "position": 15
+              },
+              {
+                "chord": "G",
+                "position": 25
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "En algún lugar",
+    "artist": "Duncan Dhu",
+    "key": "D",
+    "bpm": 120,
+    "sections": [
+      {
+        "title": "Chorus",
+        "lines": [
+          {
+            "text": "En algún lugar de un gran país",
+            "chords": [
+              {
+                "chord": "D",
+                "position": 0
+              },
+              {
+                "chord": "A",
+                "position": 15
+              },
+              {
+                "chord": "G",
+                "position": 25
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Mariposa Tecknicolor",
+    "artist": "Fito Páez",
+    "key": "G",
+    "bpm": 125,
+    "sections": [
+      {
+        "title": "Intro",
+        "lines": [
+          {
+            "text": "Todas las mañanas que viví",
+            "chords": [
+              {
+                "chord": "G",
+                "position": 0
+              },
+              {
+                "chord": "D",
+                "position": 15
+              },
+              {
+                "chord": "Am",
+                "position": 25
+              },
+              {
+                "chord": "C",
+                "position": 32
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Babel",
+    "artist": "Vicentico",
+    "key": "Am",
+    "bpm": 110,
+    "sections": [
+      {
+        "title": "Intro",
+        "lines": [
+          {
+            "text": "Todo lo que digo es Babel",
+            "chords": [
+              {
+                "chord": "Am",
+                "position": 0
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
