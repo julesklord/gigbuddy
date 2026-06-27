@@ -14,13 +14,13 @@ describe('Badge Component', () => {
     const badgeElement = container.firstChild as HTMLElement;
     
     // Check for base class and default variant/size
-    expect(badgeElement).toHaveClass('bg-white/5'); // gray variant
-    expect(badgeElement).toHaveClass('text-[8px]'); // xs size
+    expect(badgeElement).toHaveClass('tag');
+    expect(badgeElement).toHaveClass('secondary'); // gray variant maps to secondary
   });
 
   it('applies the brand variant classes', () => {
     const { container } = render(<Badge variant="brand">Brand</Badge>);
     const badgeElement = container.firstChild as HTMLElement;
-    expect(badgeElement).toHaveClass('bg-brand/10');
+    expect(badgeElement).toHaveClass('primary'); // brand maps to primary
   });
 });
