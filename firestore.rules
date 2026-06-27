@@ -89,39 +89,37 @@ service cloud.firestore {
         // Action: Join
         (incoming().diff(existing()).affectedKeys().hasOnly(['members']) && 
          request.auth.uid in incoming().members &&
-         incoming().members.size() == existing().members.size() + 1) ||
-        // Demo Bypass
-        bandId == 'demo-link-band-01'
+         incoming().members.size() == existing().members.size() + 1)
       );
       allow delete: if isSignedIn() && isBandOwner(bandId);
 
       match /saved_setlists/{setlistId} {
-        allow list, get: if isBandMember(bandId) || (isSignedIn() && bandId == 'demo-link-band-01');
-        allow create, update, delete: if isBandMember(bandId) || bandId == 'demo-link-band-01';
+        allow list, get: if isBandMember(bandId);
+        allow create, update, delete: if isBandMember(bandId);
       }
 
       match /songs/{songId} {
-        allow list, get: if isBandMember(bandId) || (isSignedIn() && bandId == 'demo-link-band-01');
-        allow create: if (isBandMember(bandId) || bandId == 'demo-link-band-01') && 
+        allow list, get: if isBandMember(bandId);
+        allow create: if isBandMember(bandId) && 
                       isValidSong(incoming()) && 
                       incoming().bandId == bandId &&
                       incoming().createdAt == request.time;
-        allow update: if (isBandMember(bandId) || bandId == 'demo-link-band-01') && 
-                      (isAuthor(existing()) || isBandOwner(bandId) || bandId == 'demo-link-band-01') &&
+        allow update: if isBandMember(bandId) && 
+                      (isAuthor(existing()) || isBandOwner(bandId)) &&
                       isValidSong(incoming()) && 
                       incoming().createdAt == existing().createdAt && 
                       incoming().bandId == existing().bandId;
-        allow delete: if isBandMember(bandId) || bandId == 'demo-link-band-01';
+        allow delete: if isBandMember(bandId);
       }
 
       match /sessions/{sessionId} {
-        allow list, get: if isBandMember(bandId) || (isSignedIn() && bandId == 'demo-link-band-01');
-        allow create: if (isBandMember(bandId) || bandId == 'demo-link-band-01') && 
+        allow list, get: if isBandMember(bandId);
+        allow create: if isBandMember(bandId) && 
                       isValidSession(incoming()) &&
                       incoming().updatedAt == request.time;
-        allow update: if (isBandMember(bandId) || bandId == 'demo-link-band-01') && 
-                      (isValidSession(incoming()) && incoming().updatedAt == request.time || bandId == 'demo-link-band-01');
-        allow delete: if isBandMember(bandId) || bandId == 'demo-link-band-01';
+        allow update: if isBandMember(bandId) && 
+                      isValidSession(incoming()) && incoming().updatedAt == request.time;
+        allow delete: if isBandMember(bandId);
       }
     }
 
