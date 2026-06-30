@@ -31,7 +31,13 @@ export const BandConfigView: React.FC<{
   return (
     <div className="fixed inset-0 h-[100dvh] w-full bg-bg-deep text-text-bright flex flex-col p-4 sm:p-6 lg:p-12 animate-in slide-in-from-left-8 duration-500 overflow-y-auto  z-50">
       <header className="max-w-3xl mx-auto w-full flex justify-between items-center mb-8 sm:mb-12 shrink-0 mt-[env(safe-area-inset-top)] pt-4">
-        <button onClick={onBack} className="p-2 bg-text-bright/5 rounded-full hover:bg-text-bright/10 transition-all"><X size={24} /></button>
+        <button
+          onClick={onBack}
+          className="p-2 bg-text-bright/5 rounded-full hover:bg-text-bright/10 transition-all focus-visible:ring-2 focus-visible:ring-brand outline-none"
+          aria-label="Go back"
+        >
+          <X size={24} />
+        </button>
         <div className="text-center">
           <span className="text-[9px] sm:text-[10px] font-mono text-brand uppercase tracking-widest block mb-1">Administrative Center</span>
           <h1 className="text-xl sm:text-3xl font-bold tracking-tighter flex items-center justify-center gap-3">
@@ -88,7 +94,8 @@ export const BandConfigView: React.FC<{
                    <span className="font-mono text-brand">{band.id}</span>
                    <button 
                     onClick={() => navigator.clipboard.writeText(band.id)}
-                    className="p-1.5 hover:bg-text-bright/5 rounded text-text-dim"
+                    className="p-1.5 hover:bg-text-bright/5 rounded text-text-dim focus-visible:ring-2 focus-visible:ring-brand outline-none"
+                    aria-label="Copy Permanent Band ID"
                    >
                      <Copy size={16} />
                    </button>
@@ -213,8 +220,9 @@ export const BandConfigView: React.FC<{
                         setMembers(prev => prev.filter(m => m.uid !== member.uid));
                       }
                     }}
-                    className="p-2 text-red-500 opacity-0 group-hover:opacity-100 hover:bg-red-500/10 rounded-lg transition-all"
+                    className="p-2 text-red-500 opacity-0 group-hover:opacity-100 focus-visible:opacity-100 hover:bg-red-500/10 rounded-lg transition-all focus-visible:ring-2 focus-visible:ring-red-500 outline-none"
                     title="Remove Member"
+                    aria-label={`Remove ${member.displayName}`}
                   >
                     <Trash2 size={18} />
                   </button>

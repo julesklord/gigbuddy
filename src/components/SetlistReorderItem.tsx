@@ -51,8 +51,9 @@ export const SetlistReorderItem: React.FC<SetlistReorderItemProps> = ({
           {song.status === SongStatus.PENDING && <span title="Offline - Pending Sync"><Globe size={10} className="text-amber-500 animate-spin" /></span>}
           <button 
             onClick={(e) => onDelete(song.id, e)}
-            className="opacity-100 lg:opacity-0 group-hover:opacity-100 p-2 text-red-500/70 hover:text-red-500 hover:bg-red-500/10 rounded-lg transition-all"
+            className="opacity-100 lg:opacity-0 group-hover:opacity-100 focus-visible:opacity-100 p-2 text-red-500/70 hover:text-red-500 hover:bg-red-500/10 rounded-lg transition-all focus-visible:ring-2 focus-visible:ring-red-500 outline-none"
             title="Delete Song"
+            aria-label={`Delete ${song.title}`}
           >
             <Trash2 size={16} />
           </button>
@@ -71,14 +72,16 @@ export const SetlistReorderItem: React.FC<SetlistReorderItemProps> = ({
         <button 
           onClick={(e) => { e.stopPropagation(); onMove(index, 'up'); }}
           disabled={index === 0}
-          className="p-2 hover:bg-text-bright/10 rounded disabled:opacity-30 flex items-center gap-1 text-[10px] font-bold uppercase transition-all"
+          className="p-2 hover:bg-text-bright/10 rounded disabled:opacity-30 flex items-center gap-1 text-[10px] font-bold uppercase transition-all focus-visible:ring-2 focus-visible:ring-brand outline-none"
+          aria-label={`Move ${song.title} up`}
         >
           <ChevronRight size={14} className="-rotate-90" /> Up
         </button>
         <button 
           onClick={(e) => { e.stopPropagation(); onMove(index, 'down'); }}
           disabled={index === totalSongs - 1}
-          className="p-2 hover:bg-text-bright/10 rounded disabled:opacity-30 flex items-center gap-1 text-[10px] font-bold uppercase transition-all"
+          className="p-2 hover:bg-text-bright/10 rounded disabled:opacity-30 flex items-center gap-1 text-[10px] font-bold uppercase transition-all focus-visible:ring-2 focus-visible:ring-brand outline-none"
+          aria-label={`Move ${song.title} down`}
         >
           <ChevronRight size={14} className="rotate-90" /> Down
         </button>
