@@ -1294,8 +1294,9 @@ export default function App() {
                         </button>
                         <button
                           onClick={(e) => handleLeaveBand(e, b.id, isOwner)}
-                          className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-text-dim hover:text-red-500 opacity-0 group-hover/band:opacity-100 transition-all"
+                          className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-text-dim hover:text-red-500 opacity-0 group-hover/band:opacity-100 focus-visible:opacity-100 transition-all"
                           title={isOwner ? "Delete Squad" : "Leave Squad"}
+                          aria-label={isOwner ? `Delete ${b.name}` : `Leave ${b.name}`}
                         >
                           {isOwner ? (
                             <Trash2 size={14} />
@@ -2521,8 +2522,9 @@ export default function App() {
                                         e.stopPropagation();
                                         handleDeleteSong(song.id, e);
                                       }}
-                                      className="opacity-0 group-hover:opacity-100 p-1 text-red-500/70 hover:text-red-500 hover:bg-red-500/10 rounded transition-all mx-2"
+                                      className="opacity-0 group-hover:opacity-100 focus-visible:opacity-100 p-1 text-red-500/70 hover:text-red-500 hover:bg-red-500/10 rounded transition-all mx-2"
                                       title="Delete Song"
+                                      aria-label={`Delete ${song.title}`}
                                     >
                                       <Trash2 size={12} />
                                     </button>
@@ -2705,7 +2707,9 @@ export default function App() {
                                 },
                               });
                             }}
-                            className="text-text-dim hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100"
+                            className="text-text-dim hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100 focus-visible:opacity-100"
+                            title="Delete Setlist"
+                            aria-label={`Delete ${saved.title}`}
                           >
                             <Trash2 size={12} />
                           </button>

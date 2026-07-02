@@ -213,8 +213,9 @@ export const BandConfigView: React.FC<{
                         setMembers(prev => prev.filter(m => m.uid !== member.uid));
                       }
                     }}
-                    className="p-2 text-red-500 opacity-0 group-hover:opacity-100 hover:bg-red-500/10 rounded-lg transition-all"
+                    className="p-2 text-red-500 opacity-0 group-hover:opacity-100 focus-visible:opacity-100 hover:bg-red-500/10 rounded-lg transition-all"
                     title="Remove Member"
+                    aria-label={`Remove ${member.displayName}`}
                   >
                     <Trash2 size={18} />
                   </button>

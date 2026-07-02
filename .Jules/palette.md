@@ -1,0 +1,3 @@
+## 2024-03-21 - Keyboard Accessibility for Hover-Revealed Actions
+**Learning:** Found a pattern where interactive elements (delete buttons, remove actions) are hidden using `opacity-0` and revealed via `group-hover:opacity-100`. While clean visually, this breaks keyboard accessibility because the elements are technically still present and tabbable, but invisible when focused via keyboard. Furthermore, they lacked `aria-label`s for screen readers.
+**Action:** For all hover-visible interactive elements, always include `focus-visible:opacity-100` alongside existing classes to ensure they become visible when keyboard-focused. Also ensure they have descriptive `aria-label`s.
