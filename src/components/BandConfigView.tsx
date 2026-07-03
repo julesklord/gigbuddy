@@ -31,7 +31,7 @@ export const BandConfigView: React.FC<{
   return (
     <div className="fixed inset-0 h-[100dvh] w-full bg-bg-deep text-text-bright flex flex-col p-4 sm:p-6 lg:p-12 animate-in slide-in-from-left-8 duration-500 overflow-y-auto  z-50">
       <header className="max-w-3xl mx-auto w-full flex justify-between items-center mb-8 sm:mb-12 shrink-0 mt-[env(safe-area-inset-top)] pt-4">
-        <button onClick={onBack} className="p-2 bg-text-bright/5 rounded-full hover:bg-text-bright/10 transition-all"><X size={24} /></button>
+        <button aria-label="Go back" onClick={onBack} className="p-2 bg-text-bright/5 rounded-full hover:bg-text-bright/10 transition-all"><X size={24} /></button>
         <div className="text-center">
           <span className="text-[9px] sm:text-[10px] font-mono text-brand uppercase tracking-widest block mb-1">Administrative Center</span>
           <h1 className="text-xl sm:text-3xl font-bold tracking-tighter flex items-center justify-center gap-3">
