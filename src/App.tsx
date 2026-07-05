@@ -2521,8 +2521,9 @@ export default function App() {
                                         e.stopPropagation();
                                         handleDeleteSong(song.id, e);
                                       }}
-                                      className="opacity-0 group-hover:opacity-100 p-1 text-red-500/70 hover:text-red-500 hover:bg-red-500/10 rounded transition-all mx-2"
+                                      className="opacity-0 group-hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-2 focus-visible:outline-none p-1 text-red-500/70 hover:text-red-500 hover:bg-red-500/10 rounded transition-all mx-2"
                                       title="Delete Song"
+                                      aria-label="Delete Song"
                                     >
                                       <Trash2 size={12} />
                                     </button>
@@ -2705,7 +2706,8 @@ export default function App() {
                                 },
                               });
                             }}
-                            className="text-text-dim hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100"
+                            className="text-text-dim hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-2 focus-visible:outline-none rounded"
+                            aria-label="Delete Setlist"
                           >
                             <Trash2 size={12} />
                           </button>
