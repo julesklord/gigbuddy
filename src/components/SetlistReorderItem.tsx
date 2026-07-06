@@ -51,8 +51,9 @@ export const SetlistReorderItem: React.FC<SetlistReorderItemProps> = ({
           {song.status === SongStatus.PENDING && <span title="Offline - Pending Sync"><Globe size={10} className="text-amber-500 animate-spin" /></span>}
           <button 
             onClick={(e) => onDelete(song.id, e)}
-            className="opacity-100 lg:opacity-0 group-hover:opacity-100 p-2 text-red-500/70 hover:text-red-500 hover:bg-red-500/10 rounded-lg transition-all"
+            className="opacity-100 lg:opacity-0 group-hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-2 focus-visible:outline-none p-2 text-red-500/70 hover:text-red-500 hover:bg-red-500/10 rounded-lg transition-all"
             title="Delete Song"
+            aria-label="Delete Song"
           >
             <Trash2 size={16} />
           </button>
