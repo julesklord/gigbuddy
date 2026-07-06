@@ -19,7 +19,13 @@ export const UserConfigView: React.FC<{
   return (
     <div className="fixed inset-0 h-[100dvh] w-full bg-bg-deep text-text-bright flex flex-col p-4 sm:p-6 lg:p-12 animate-in slide-in-from-right-8 duration-500 overflow-y-auto  z-50">
       <header className="max-w-2xl mx-auto w-full flex justify-between items-center mb-8 sm:mb-12 shrink-0 mt-[env(safe-area-inset-top)] pt-4">
-        <button onClick={onBack} className="p-2 bg-text-bright/5 rounded-full hover:bg-text-bright/10 transition-all"><X size={24} /></button>
+        <button
+          aria-label="Close profile"
+          onClick={onBack}
+          className="p-2 bg-text-bright/5 rounded-full hover:bg-text-bright/10 focus-visible:ring-2 focus-visible:outline-none transition-all"
+        >
+          <X size={24} />
+        </button>
         <h1 className="text-xl sm:text-2xl font-bold tracking-tighter">Your Profile</h1>
         <button 
           onClick={() => {
@@ -52,7 +58,13 @@ export const UserConfigView: React.FC<{
             ) : (
               <UserCircle size={128} className="text-text-bright/10" />
             )}
-            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity text-xs font-mono font-bold uppercase tracking-widest text-brand">Update</div>
+            <button
+              type="button"
+              onClick={() => document.getElementById('profile-photo')?.focus()}
+              className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-2 focus-visible:outline-none flex items-center justify-center transition-opacity text-xs font-mono font-bold uppercase tracking-widest text-brand"
+            >
+              Update
+            </button>
           </div>
           <div className="text-center">
             <h2 className="text-xl font-bold">{name}</h2>
@@ -62,8 +74,9 @@ export const UserConfigView: React.FC<{
 
         <div className="grid gap-6">
           <div className="space-y-2">
-            <label className="text-[10px] uppercase font-bold tracking-[0.2em] text-text-dim px-1">Display Name</label>
+            <label htmlFor="profile-name" className="text-[10px] uppercase font-bold tracking-[0.2em] text-text-dim px-1">Display Name</label>
             <input 
+              id="profile-name"
               type="text" 
               value={name} 
               onChange={e => setName(e.target.value)}
@@ -71,8 +84,9 @@ export const UserConfigView: React.FC<{
             />
           </div>
           <div className="space-y-2">
-            <label className="text-[10px] uppercase font-bold tracking-[0.2em] text-text-dim px-1">Photo URL</label>
+            <label htmlFor="profile-photo" className="text-[10px] uppercase font-bold tracking-[0.2em] text-text-dim px-1">Photo URL</label>
             <input 
+              id="profile-photo"
               type="text" 
               value={photo} 
               onChange={e => setPhoto(e.target.value)}
@@ -81,8 +95,9 @@ export const UserConfigView: React.FC<{
             />
           </div>
           <div className="space-y-2">
-            <label className="text-[10px] uppercase font-bold tracking-[0.2em] text-text-dim px-1">Bio</label>
+            <label htmlFor="profile-bio" className="text-[10px] uppercase font-bold tracking-[0.2em] text-text-dim px-1">Bio</label>
             <textarea 
+              id="profile-bio"
               rows={4}
               value={bio} 
               onChange={e => setBio(e.target.value)}
