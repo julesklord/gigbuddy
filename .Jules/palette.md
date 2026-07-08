@@ -9,3 +9,6 @@
 ## 2024-05-19 - Interactive Overlays & Form Associations
 **Learning:** Common patterns in React like visual-only hover states over profile pictures (`<div className="group-hover:opacity-100">`) can be made keyboard accessible by replacing the `<div>` with a `<button>` and adding `focus-visible` styles (`focus-visible:opacity-100 focus-visible:ring-2`). Additionally, explicitly linking `<label>` to `<input>` with `htmlFor` and `id` improves accessibility significantly for visually hidden inputs, making it much easier for screen readers to associate the two.
 **Action:** When adding or discovering hover-visible elements, check if they describe an action and convert them to interactive elements (`<button>`) with keyboard focus states. Also explicitly link forms with `htmlFor`/`id` combinations.
+## 2026-07-08 - Attachment Manager Accessibility Overhaul
+**Learning:** Icon-only buttons and unlinked form labels severely impact screen reader usability, especially in dynamically rendered forms like the AttachmentsManager. Adding 'focus-visible' states to hover-only elements makes them discoverable via keyboard navigation.
+**Action:** Always link labels to inputs with 'htmlFor' and 'id'. Ensure all icon-only buttons have descriptive 'aria-label's and visible focus states ('focus-visible:ring-2').
