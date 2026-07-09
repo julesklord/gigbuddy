@@ -72,8 +72,9 @@ export const BandConfigView: React.FC<{
           </div>
           <div className="space-y-4">
              <div className="grid gap-2">
-                <label className="text-[10px] uppercase font-bold tracking-[0.2em] text-text-dim px-1">Band Name</label>
+                <label htmlFor="band-name" className="text-[10px] uppercase font-bold tracking-[0.2em] text-text-dim px-1">Band Name</label>
                 <input 
+                  id="band-name"
                   type="text" 
                   value={name} 
                   readOnly={!isAdmin}
@@ -88,7 +89,8 @@ export const BandConfigView: React.FC<{
                    <span className="font-mono text-brand">{band.id}</span>
                    <button 
                     onClick={() => navigator.clipboard.writeText(band.id)}
-                    className="p-1.5 hover:bg-text-bright/5 rounded text-text-dim"
+                    className="p-1.5 hover:bg-text-bright/5 rounded text-text-dim focus-visible:ring-2 focus-visible:outline-none"
+                    aria-label="Copy Band ID to clipboard"
                    >
                      <Copy size={16} />
                    </button>
@@ -136,10 +138,11 @@ export const BandConfigView: React.FC<{
                       onClick={() => setAccentColor(color)}
                       style={{ backgroundColor: color }}
                       className={cn(
-                        "w-8 h-8 rounded-full shadow-lg transition-transform", 
+                        "w-8 h-8 rounded-full shadow-lg transition-transform focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep focus-visible:outline-none",
                         !isAdmin ? "opacity-50 pointer-events-none" : "hover:scale-110",
                         accentColor === color ? "ring-2 ring-white ring-offset-2 ring-offset-bg-deep scale-110" : ""
                       )}
+                      aria-label={`Select color ${color}`}
                     />
                   ))}
                   {isAdmin && (
@@ -147,8 +150,9 @@ export const BandConfigView: React.FC<{
                       type="color" 
                       value={accentColor}
                       onChange={e => setAccentColor(e.target.value)}
-                      className="w-8 h-8 rounded-full overflow-hidden cursor-pointer border-0 bg-transparent"
+                      className="w-8 h-8 rounded-full overflow-hidden cursor-pointer border-0 bg-transparent focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
                       title="Custom color"
+                      aria-label="Select custom accent color"
                     />
                   )}
                 </div>
@@ -167,10 +171,11 @@ export const BandConfigView: React.FC<{
                       key={font.id}
                       onClick={() => setFontFamily(font.id)}
                       className={cn(
-                        "px-4 py-3 border rounded-xl text-left transition-colors flex justify-between items-center group",
+                        "px-4 py-3 border rounded-xl text-left transition-colors flex justify-between items-center group focus-visible:ring-2 focus-visible:outline-none",
                         !isAdmin ? "opacity-50 pointer-events-none" : "hover:bg-text-bright/5",
                         fontFamily === font.id ? "border-brand text-brand bg-brand/5" : "border-border-main"
                       )}
+                      aria-label={`Select font ${font.label}`}
                     >
                       <span style={{ fontFamily: `"${font.id}", sans-serif` }}>{font.label}</span>
                       {fontFamily === font.id && <Check size={16} />}

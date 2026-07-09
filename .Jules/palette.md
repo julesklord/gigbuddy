@@ -12,3 +12,6 @@
 ## 2026-07-08 - Attachment Manager Accessibility Overhaul
 **Learning:** Icon-only buttons and unlinked form labels severely impact screen reader usability, especially in dynamically rendered forms like the AttachmentsManager. Adding 'focus-visible' states to hover-only elements makes them discoverable via keyboard navigation.
 **Action:** Always link labels to inputs with 'htmlFor' and 'id'. Ensure all icon-only buttons have descriptive 'aria-label's and visible focus states ('focus-visible:ring-2').
+## 2026-07-09 - BandConfigView Accessibility Overhaul
+**Learning:** Missing explicit linking between labels and inputs, as well as missing focus states and ARIA labels for custom UI elements (like color swatches or custom file inputs), creates significant barriers for screen reader and keyboard users in configuration panels.
+**Action:** Always link `<label>`s to `<input>`s with `htmlFor` and `id`. Ensure custom UI controls have clear `aria-label` attributes and visible focus states (`focus-visible:ring-2`) for keyboard navigation.
