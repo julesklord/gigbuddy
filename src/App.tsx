@@ -1294,8 +1294,9 @@ export default function App() {
                         </button>
                         <button
                           onClick={(e) => handleLeaveBand(e, b.id, isOwner)}
-                          className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-text-dim hover:text-red-500 opacity-0 group-hover/band:opacity-100 transition-all"
+                          className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-text-dim hover:text-red-500 opacity-0 group-hover/band:opacity-100 focus-visible:opacity-100 focus-visible:ring-2 focus-visible:outline-none transition-all rounded"
                           title={isOwner ? "Delete Squad" : "Leave Squad"}
+                          aria-label={isOwner ? "Delete Squad" : "Leave Squad"}
                         >
                           {isOwner ? (
                             <Trash2 size={14} />

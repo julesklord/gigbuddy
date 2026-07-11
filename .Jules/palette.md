@@ -15,3 +15,6 @@
 ## 2026-07-09 - BandConfigView Accessibility Overhaul
 **Learning:** Missing explicit linking between labels and inputs, as well as missing focus states and ARIA labels for custom UI elements (like color swatches or custom file inputs), creates significant barriers for screen reader and keyboard users in configuration panels.
 **Action:** Always link `<label>`s to `<input>`s with `htmlFor` and `id`. Ensure custom UI controls have clear `aria-label` attributes and visible focus states (`focus-visible:ring-2`) for keyboard navigation.
+## 2024-07-26 - Missing Aria Labels and Focus States on Hover-only Elements
+**Learning:** Found a pattern where interactive elements that are hidden by default and only revealed on hover (using `opacity-0 group-hover/band:opacity-100`) lack focus states and aria labels, making them completely inaccessible to keyboard and screen reader users.
+**Action:** When adding or encountering hover-only interactive elements, ensure they are paired with keyboard focus visibility classes (`focus-visible:opacity-100 focus-visible:ring-2 focus-visible:outline-none`) and descriptive `aria-label`s.
