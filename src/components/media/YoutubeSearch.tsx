@@ -83,7 +83,9 @@ export const YoutubeSearch: React.FC<YoutubeSearchProps> = ({
       )}
 
       <form onSubmit={handleSearch} className="relative">
+        <label htmlFor="youtube-search-input" className="sr-only">Search YouTube</label>
         <input
+          id="youtube-search-input"
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -92,7 +94,8 @@ export const YoutubeSearch: React.FC<YoutubeSearchProps> = ({
         />
         <button
           type="submit"
-          className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-text-dim hover:text-brand transition-colors"
+          aria-label="Search YouTube"
+          className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-text-dim hover:text-brand transition-colors focus-visible:ring-2 focus-visible:outline-none rounded"
           disabled={loading}
         >
           {loading ? (
