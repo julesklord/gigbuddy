@@ -18,3 +18,6 @@
 ## 2024-07-26 - Missing Aria Labels and Focus States on Hover-only Elements
 **Learning:** Found a pattern where interactive elements that are hidden by default and only revealed on hover (using `opacity-0 group-hover/band:opacity-100`) lack focus states and aria labels, making them completely inaccessible to keyboard and screen reader users.
 **Action:** When adding or encountering hover-only interactive elements, ensure they are paired with keyboard focus visibility classes (`focus-visible:opacity-100 focus-visible:ring-2 focus-visible:outline-none`) and descriptive `aria-label`s.
+## 2024-07-28 - Missing Form Labels and Aria Attributes in Search Components
+**Learning:** Found a pattern where search inputs lack associated labels and submit buttons (icon-only) lack aria labels. This creates significant barriers for screen reader users trying to understand the purpose of form inputs.
+**Action:** When adding or encountering search forms, ensure all inputs have associated labels (even if visually hidden with `sr-only`) and all icon-only buttons have descriptive `aria-label`s and visible focus states (`focus-visible:ring-2 focus-visible:outline-none`).
