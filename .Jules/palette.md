@@ -21,3 +21,7 @@
 ## 2024-07-28 - Missing Form Labels and Aria Attributes in Search Components
 **Learning:** Found a pattern where search inputs lack associated labels and submit buttons (icon-only) lack aria labels. This creates significant barriers for screen reader users trying to understand the purpose of form inputs.
 **Action:** When adding or encountering search forms, ensure all inputs have associated labels (even if visually hidden with `sr-only`) and all icon-only buttons have descriptive `aria-label`s and visible focus states (`focus-visible:ring-2 focus-visible:outline-none`).
+
+## 2026-07-13 - Explicitly Linking Labels to Inputs in Form Controls
+**Learning:** In metadata and form controls, visual proximity of a label to an input does not guarantee accessibility. Screen readers rely on semantic linking (`htmlFor` on `<label>` and `id` on `<input>`) to properly announce the input's purpose to users.
+**Action:** Always explicitly link \`<label>\` tags to their corresponding \`<input>\` fields using \`htmlFor\` and \`id\` attributes to ensure robust accessibility.
