@@ -3055,10 +3055,11 @@ export default function App() {
                         {/* Song Metadata Controls */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-bg-card p-4 sm:p-6 rounded-xl border border-border-main">
                           <div className="space-y-1">
-                            <label className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
+                            <label htmlFor="meta-title" className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
                               Title
                             </label>
                             <input
+                              id="meta-title"
                               value={visualMetadata.title || ""}
                               onChange={(e) =>
                                 setVisualMetadata({
@@ -3071,10 +3072,11 @@ export default function App() {
                             />
                           </div>
                           <div className="space-y-1">
-                            <label className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
+                            <label htmlFor="meta-artist" className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
                               Artist
                             </label>
                             <input
+                              id="meta-artist"
                               value={visualMetadata.artist || ""}
                               onChange={(e) =>
                                 setVisualMetadata({
@@ -3090,10 +3092,11 @@ export default function App() {
 
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 bg-bg-card p-4 sm:p-6 rounded-xl border border-border-main">
                           <div className="space-y-1">
-                            <label className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
+                            <label htmlFor="meta-key" className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
                               Key
                             </label>
                             <input
+                              id="meta-key"
                               value={visualMetadata.key || ""}
                               onChange={(e) =>
                                 setVisualMetadata({
@@ -3106,10 +3109,11 @@ export default function App() {
                             />
                           </div>
                           <div className="space-y-1">
-                            <label className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
+                            <label htmlFor="meta-bpm" className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
                               BPM
                             </label>
                             <input
+                              id="meta-bpm"
                               type="number"
                               value={visualMetadata.bpm || ""}
                               onChange={(e) => {
@@ -3123,10 +3127,11 @@ export default function App() {
                             />
                           </div>
                           <div className="space-y-1">
-                            <label className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
+                            <label htmlFor="meta-duration" className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
                               Time (s)
                             </label>
                             <input
+                              id="meta-duration"
                               type="number"
                               value={visualMetadata.duration || ""}
                               onChange={(e) =>
@@ -3141,10 +3146,11 @@ export default function App() {
                             />
                           </div>
                           <div className="space-y-1">
-                            <label className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
+                            <label htmlFor="meta-capo" className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
                               Capo
                             </label>
                             <input
+                              id="meta-capo"
                               type="number"
                               value={visualMetadata.capo || ""}
                               onChange={(e) =>
