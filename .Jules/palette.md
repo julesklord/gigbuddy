@@ -25,3 +25,6 @@
 ## 2026-07-13 - Explicitly Linking Labels to Inputs in Form Controls
 **Learning:** In metadata and form controls, visual proximity of a label to an input does not guarantee accessibility. Screen readers rely on semantic linking (`htmlFor` on `<label>` and `id` on `<input>`) to properly announce the input's purpose to users.
 **Action:** Always explicitly link \`<label>\` tags to their corresponding \`<input>\` fields using \`htmlFor\` and \`id\` attributes to ensure robust accessibility.
+## 2024-05-19 - Accessible Search Input
+**Learning:** Placeholder text is not a reliable replacement for a label for screen reader users. Input fields like the setlist search must have an explicit label or `aria-label`.
+**Action:** Always verify that input fields without visible labels have descriptive `aria-label`s for screen reader support.
