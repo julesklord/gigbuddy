@@ -76,7 +76,8 @@ export const GlobalSettingsView: React.FC<{
       <header className="max-w-2xl mx-auto w-full flex justify-between items-center mb-8 sm:mb-12 shrink-0 mt-[env(safe-area-inset-top)] pt-4">
         <button
           onClick={onBack}
-          className="p-2 bg-text-bright/5 rounded-full hover:bg-text-bright/10 transition-all"
+          aria-label="Close global settings"
+          className="p-2 bg-text-bright/5 rounded-full hover:bg-text-bright/10 focus-visible:ring-2 focus-visible:outline-none transition-all"
         >
           <X size={24} />
         </button>
@@ -274,17 +275,21 @@ export const GlobalSettingsView: React.FC<{
 
             <div className="flex items-center justify-between border-t border-text-bright/5 pt-6">
               <div className="space-y-1 pr-4">
-                <h3 className="text-sm font-bold">Floating Transport Bar</h3>
-                <p className="text-[10px] text-text-dim leading-relaxed">
+                <h3 id="floating-transport-label" className="text-sm font-bold">Floating Transport Bar</h3>
+                <p id="floating-transport-desc" className="text-[10px] text-text-dim leading-relaxed">
                   When enabled, the playback bar will float in the center. When
                   disabled, it stays fixed at the bottom stretching across the
                   screen.
                 </p>
               </div>
               <button
+                role="switch"
+                aria-checked={isTransportFloating}
+                aria-labelledby="floating-transport-label"
+                aria-describedby="floating-transport-desc"
                 onClick={() => setIsTransportFloating(!isTransportFloating)}
                 className={cn(
-                  "w-12 h-6 rounded-full transition-colors flex items-center px-1 shrink-0",
+                  "w-12 h-6 rounded-full transition-colors flex items-center px-1 shrink-0 focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep focus-visible:outline-none",
                   isTransportFloating ? "bg-brand" : "bg-text-bright/10",
                 )}
               >
@@ -543,16 +548,20 @@ export const GlobalSettingsView: React.FC<{
           <div className="bg-bg-card border border-border-main rounded-xl p-4 sm:p-6">
             <div className="flex items-center justify-between">
               <div className="space-y-1 pr-4">
-                <h3 className="font-bold">Real-time Stage Sync</h3>
-                <p className="text-[10px] text-text-dim leading-relaxed">
+                <h3 id="live-sync-label" className="font-bold">Real-time Stage Sync</h3>
+                <p id="live-sync-desc" className="text-[10px] text-text-dim leading-relaxed">
                   When enabled, any song selected by the band leader will
                   automatically change on all members' screens over the network.
                 </p>
               </div>
               <button
+                role="switch"
+                aria-checked={isLiveSyncEnabled}
+                aria-labelledby="live-sync-label"
+                aria-describedby="live-sync-desc"
                 onClick={() => setIsLiveSyncEnabled(!isLiveSyncEnabled)}
                 className={cn(
-                  "w-12 h-6 rounded-full transition-colors flex items-center px-1 shrink-0",
+                  "w-12 h-6 rounded-full transition-colors flex items-center px-1 shrink-0 focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep focus-visible:outline-none",
                   isLiveSyncEnabled ? "bg-brand" : "bg-text-bright/10",
                 )}
               >

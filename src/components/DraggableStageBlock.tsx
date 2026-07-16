@@ -33,8 +33,9 @@ export const DraggableStageBlock = ({ id, blockInfo, isVisible, toggleVisibility
       </div>
       <button 
         onClick={(e) => { e.stopPropagation(); toggleVisibility(); }}
+        aria-label={`${isVisible ? 'Hide' : 'Show'} ${blockInfo.label}`}
         className={cn(
-          "p-2 rounded-full transition-colors flex items-center gap-2 border",
+          "p-2 rounded-full transition-colors flex items-center gap-2 border focus-visible:ring-2 focus-visible:outline-none",
           isVisible ? "bg-brand/10 text-brand border-brand/20 hover:bg-brand/20" : "bg-text-bright/5 text-text-dim border-border-main hover:text-text-bright"
         )}
         onPointerDown={(e) => e.stopPropagation()}
