@@ -2336,6 +2336,7 @@ export default function App() {
                 />
                 <input
                   type="text"
+                  aria-label="Search by title or artist"
                   placeholder="Search by title or artist..."
                   value={songSearchQuery}
                   onChange={(e) => setSongSearchQuery(e.target.value)}
