@@ -28,3 +28,7 @@
 ## 2024-05-19 - Accessible Search Input
 **Learning:** Placeholder text is not a reliable replacement for a label for screen reader users. Input fields like the setlist search must have an explicit label or `aria-label`.
 **Action:** Always verify that input fields without visible labels have descriptive `aria-label`s for screen reader support.
+
+## 2026-07-16 - Accessible Custom Toggle Switches
+**Learning:** When building custom toggle switches using standard buttons, they lack the semantic meaning of a switch for screen readers unless explicitly defined. Visual proximity of labels and descriptions is also insufficient.
+**Action:** Always add `role="switch"`, `aria-checked`, and link the button to its label and description using `aria-labelledby` and `aria-describedby`. Additionally, ensure visible focus states are present.
