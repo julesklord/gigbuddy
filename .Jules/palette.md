@@ -32,3 +32,6 @@
 ## 2026-07-16 - Accessible Custom Toggle Switches
 **Learning:** When building custom toggle switches using standard buttons, they lack the semantic meaning of a switch for screen readers unless explicitly defined. Visual proximity of labels and descriptions is also insufficient.
 **Action:** Always add `role="switch"`, `aria-checked`, and link the button to its label and description using `aria-labelledby` and `aria-describedby`. Additionally, ensure visible focus states are present.
+## 2024-07-27 - Aria Labels for Placeholder-only Inputs
+**Learning:** Input fields that rely solely on `placeholder` attributes (without explicit `<label>` elements) are inaccessible because screen readers often skip placeholders or fail to associate them robustly as accessible names. This is especially problematic in dynamic forms or inline editing modes where space is limited and visible labels are omitted.
+**Action:** Always provide an `aria-label` attribute on `<input>` elements when a visibly associated `<label>` tag is missing. This ensures screen readers announce the input's purpose correctly without affecting the visual layout.

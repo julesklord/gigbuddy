@@ -1323,6 +1323,7 @@ export default function App() {
               </div>
               <input
                 type="text"
+                aria-label="Session code"
                 placeholder="Ex: group-K9XJ3P"
                 className="w-full bg-bg-deep/40 border border-text-bright/10 rounded-xl px-4 py-3 text-brand font-mono uppercase tracking-widest focus:border-brand/50 focus:outline-none placeholder:text-text-bright/10 transition-all"
                 id="session-code-input"
@@ -2580,6 +2581,7 @@ export default function App() {
                         >
                           <input
                             autoFocus
+                            aria-label="New setlist name"
                             value={newSetlistTitle}
                             onChange={(e) => setNewSetlistTitle(e.target.value)}
                             placeholder="Setlist Name..."
@@ -2618,6 +2620,7 @@ export default function App() {
                       >
                         <input
                           autoFocus
+                          aria-label="New song title"
                           value={newSongTitle}
                           onChange={(e) => setNewSongTitle(e.target.value)}
                           placeholder="Song Title..."
@@ -3174,6 +3177,7 @@ export default function App() {
                             {(visualMetadata?.notes || []).map((note, idx) => (
                               <div key={idx} className="flex gap-2">
                                 <input
+                                  aria-label={`Performance note ${idx + 1}`}
                                   value={note || ""}
                                   onChange={(e) => {
                                     const newNotes = [...visualMetadata.notes];
@@ -3274,6 +3278,7 @@ export default function App() {
                           >
                             <div className="flex items-center gap-4">
                               <input
+                                aria-label={`Section title ${sIdx + 1}`}
                                 value={section.title || ""}
                                 onChange={(e) =>
                                   updateSectionTitle(sIdx, e.target.value)
@@ -3295,6 +3300,7 @@ export default function App() {
                                       {lIdx + 1}
                                     </span>
                                     <input
+                                      aria-label={`Lyric line ${lIdx + 1}`}
                                       value={line.text || ""}
                                       onChange={(e) =>
                                         updateVisualLine(
