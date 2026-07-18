@@ -143,12 +143,7 @@ export default function App() {
   const [pendingSyncs, setPendingSyncs] = useState(0); // test edit
   const [isEditing, setIsEditing] = useState(false);
 
-  const {
-    globalTheme,
-    setGlobalTheme,
-    globalMode,
-    setGlobalMode,
-  } = useTheme();
+  const { globalTheme, setGlobalTheme, globalMode, setGlobalMode } = useTheme();
 
   const {
     textSizeMultiplier,
@@ -1838,6 +1833,7 @@ export default function App() {
               <button
                 onClick={skipBackward}
                 className="text-text-dim hover:text-text-bright transition-colors"
+                aria-label="Skip Backward"
               >
                 <SkipBack size={24} />
               </button>
@@ -1845,6 +1841,7 @@ export default function App() {
                 whileTap={{ scale: 0.9 }}
                 onClick={togglePlayback}
                 className="w-12 h-12 flex items-center justify-center bg-text-bright text-bg-deep rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+                aria-label={isPlaying ? "Pause" : "Play"}
               >
                 {isPlaying ? (
                   <Pause size={24} fill="currentColor" />
@@ -1855,6 +1852,7 @@ export default function App() {
               <button
                 onClick={skipForward}
                 className="text-text-dim hover:text-text-bright transition-colors"
+                aria-label="Skip Forward"
               >
                 <SkipForward size={24} />
               </button>
@@ -1863,6 +1861,7 @@ export default function App() {
                 onClick={() => setIsTransportFloating(!isTransportFloating)}
                 className="text-text-dim hover:text-text-bright transition-colors"
                 title="Dock Transport"
+                aria-label="Dock Transport"
               >
                 <Layers size={18} />
               </button>
@@ -1886,12 +1885,14 @@ export default function App() {
               <button
                 onClick={skipBackward}
                 className="text-text-dim hover:text-brand transition-colors p-2"
+                aria-label="Skip Backward"
               >
                 <SkipBack size={24} className="lg:w-7 lg:h-7" />
               </button>
               <button
                 onClick={togglePlayback}
                 className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center bg-brand text-brand-contrast rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,69,0,0.2)]"
+                aria-label={isPlaying ? "Pause" : "Play"}
               >
                 {isPlaying ? (
                   <Pause
@@ -1910,6 +1911,7 @@ export default function App() {
               <button
                 onClick={skipForward}
                 className="text-text-dim hover:text-brand transition-colors p-2"
+                aria-label="Skip Forward"
               >
                 <SkipForward size={24} className="lg:w-7 lg:h-7" />
               </button>
@@ -2237,6 +2239,7 @@ export default function App() {
                         onClick={handleClearSetlist}
                         className="text-red-500/70 hover:text-red-400 p-1"
                         title="Clear Setlist"
+                        aria-label="Clear Setlist"
                       >
                         <Trash2 size={12} />
                       </button>
@@ -3059,7 +3062,10 @@ export default function App() {
                         {/* Song Metadata Controls */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-bg-card p-4 sm:p-6 rounded-xl border border-border-main">
                           <div className="space-y-1">
-                            <label htmlFor="meta-title" className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
+                            <label
+                              htmlFor="meta-title"
+                              className="text-[10px] uppercase font-bold text-text-dim tracking-widest"
+                            >
                               Title
                             </label>
                             <input
@@ -3076,7 +3082,10 @@ export default function App() {
                             />
                           </div>
                           <div className="space-y-1">
-                            <label htmlFor="meta-artist" className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
+                            <label
+                              htmlFor="meta-artist"
+                              className="text-[10px] uppercase font-bold text-text-dim tracking-widest"
+                            >
                               Artist
                             </label>
                             <input
@@ -3096,7 +3105,10 @@ export default function App() {
 
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 bg-bg-card p-4 sm:p-6 rounded-xl border border-border-main">
                           <div className="space-y-1">
-                            <label htmlFor="meta-key" className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
+                            <label
+                              htmlFor="meta-key"
+                              className="text-[10px] uppercase font-bold text-text-dim tracking-widest"
+                            >
                               Key
                             </label>
                             <input
@@ -3113,7 +3125,10 @@ export default function App() {
                             />
                           </div>
                           <div className="space-y-1">
-                            <label htmlFor="meta-bpm" className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
+                            <label
+                              htmlFor="meta-bpm"
+                              className="text-[10px] uppercase font-bold text-text-dim tracking-widest"
+                            >
                               BPM
                             </label>
                             <input
@@ -3131,7 +3146,10 @@ export default function App() {
                             />
                           </div>
                           <div className="space-y-1">
-                            <label htmlFor="meta-duration" className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
+                            <label
+                              htmlFor="meta-duration"
+                              className="text-[10px] uppercase font-bold text-text-dim tracking-widest"
+                            >
                               Time (s)
                             </label>
                             <input
@@ -3150,7 +3168,10 @@ export default function App() {
                             />
                           </div>
                           <div className="space-y-1">
-                            <label htmlFor="meta-capo" className="text-[10px] uppercase font-bold text-text-dim tracking-widest">
+                            <label
+                              htmlFor="meta-capo"
+                              className="text-[10px] uppercase font-bold text-text-dim tracking-widest"
+                            >
                               Capo
                             </label>
                             <input
@@ -3487,6 +3508,7 @@ export default function App() {
                   <button
                     onClick={skipBackward}
                     className="text-text-dim hover:text-text-bright transition-colors"
+                    aria-label="Skip Backward"
                   >
                     <SkipBack size={24} />
                   </button>
@@ -3494,6 +3516,7 @@ export default function App() {
                     whileTap={{ scale: 0.9 }}
                     onClick={togglePlayback}
                     className="w-12 h-12 flex items-center justify-center bg-text-bright text-bg-deep rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+                    aria-label={isPlaying ? "Pause" : "Play"}
                   >
                     {isPlaying ? (
                       <Pause size={24} fill="currentColor" />
@@ -3504,6 +3527,7 @@ export default function App() {
                   <button
                     onClick={skipForward}
                     className="text-text-dim hover:text-text-bright transition-colors"
+                    aria-label="Skip Forward"
                   >
                     <SkipForward size={24} />
                   </button>
@@ -3512,6 +3536,7 @@ export default function App() {
                     onClick={() => setIsTransportFloating(!isTransportFloating)}
                     className="text-text-dim hover:text-text-bright transition-colors"
                     title="Dock Transport"
+                    aria-label="Dock Transport"
                   >
                     <Layers size={18} />
                   </button>
@@ -3553,6 +3578,7 @@ export default function App() {
                     <button
                       onClick={skipBackward}
                       className="p-2 rounded-full text-text-dim hover:text-brand hover:bg-text-bright/5 active:scale-90 transition-all"
+                      aria-label="Skip Backward"
                     >
                       <SkipBack
                         size={20}
@@ -3563,6 +3589,7 @@ export default function App() {
                       whileTap={{ scale: 0.9 }}
                       onClick={togglePlayback}
                       className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full bg-brand text-brand-contrast hover:scale-105 active:scale-95 transition-transform shadow-[0_0_20px_rgba(255,69,0,0.3)]"
+                      aria-label={isPlaying ? "Pause" : "Play"}
                     >
                       {isPlaying ? (
                         <Pause
@@ -3581,6 +3608,7 @@ export default function App() {
                     <button
                       onClick={skipForward}
                       className="p-2 rounded-full text-text-dim hover:text-brand hover:bg-text-bright/5 active:scale-90 transition-all"
+                      aria-label="Skip Forward"
                     >
                       <SkipForward
                         size={20}
