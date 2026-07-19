@@ -1984,7 +1984,9 @@ export default function App() {
           <div className="flex items-center gap-1.5 sm:gap-3 lg:gap-4 min-w-0 flex-1">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-1.5 text-brand hover:bg-text-bright/5 rounded transition-colors shrink-0"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
+              className="lg:hidden p-1.5 text-brand hover:bg-text-bright/5 focus-visible:bg-text-bright/5 rounded transition-colors shrink-0 focus-visible:ring-2 focus-visible:outline-none"
             >
               <Menu size={20} />
             </button>
