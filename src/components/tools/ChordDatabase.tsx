@@ -157,6 +157,7 @@ export const ChordDatabase: React.FC = () => {
         </div>
         <input
           type="text"
+          aria-label="Search chords"
           placeholder="Search chords (e.g. Cmaj7)..."
           className="w-full bg-black/50 border border-white/10 rounded-lg pl-9 pr-3 py-2 text-sm text-text-bright placeholder-text-dim/50 focus:outline-none focus:border-brand/50 transition-colors"
           value={searchQuery}

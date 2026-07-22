@@ -77,6 +77,7 @@ export const CollaborativeNotes: React.FC<CollaborativeNotesProps> = ({ context,
       <div className="relative group p-1">
         <textarea
           ref={textareaRef}
+          aria-label="Collaborative session notes"
           value={notes}
           onChange={(e) => {
             setNotes(e.target.value);

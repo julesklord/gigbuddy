@@ -7,3 +7,8 @@
 
 **Learning:** The mobile navigation menu toggle button was missing `aria-label` and `aria-expanded` attributes, making it difficult for screen reader users to understand its purpose and current state. It also lacked keyboard focus indicators.
 **Action:** Always include `aria-label` and dynamic `aria-expanded` attributes on menu toggle buttons, along with visible focus states (`focus-visible:ring-2 focus-visible:outline-none`) to ensure full accessibility.
+
+## 2024-11-20 - Missing ARIA Labels on Unlabelled Range and Text Inputs
+
+**Learning:** Range sliders (e.g., speed, BPM, text size) and standalone textareas (e.g., collaborative notes) often rely purely on surrounding text or placeholders for context. Screen readers cannot properly identify the purpose of these inputs without a direct association or explicit semantic labeling, leading to a confusing experience.
+**Action:** When a visually associated `<label>` tag is missing or impractical (due to design constraints), explicitly provide an `aria-label` attribute on `<input>` and `<textarea>` elements so screen readers can accurately communicate their purpose.

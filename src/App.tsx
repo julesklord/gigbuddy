@@ -2889,6 +2889,7 @@ export default function App() {
                               </span>
                               <input
                                 type="range"
+                                aria-label="Teleprompter speed"
                                 min="0.5"
                                 max="3"
                                 step="0.1"
