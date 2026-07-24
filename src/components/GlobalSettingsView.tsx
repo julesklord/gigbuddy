@@ -118,6 +118,7 @@ export const GlobalSettingsView: React.FC<{
               </p>
               <input
                 type="range"
+                aria-label="Teleprompter speed multiplier"
                 min="0.5"
                 max="3"
                 step="0.1"
@@ -141,6 +142,7 @@ export const GlobalSettingsView: React.FC<{
               </p>
               <input
                 type="range"
+                aria-label="Text size multiplier"
                 min="0.5"
                 max="2"
                 step="0.1"

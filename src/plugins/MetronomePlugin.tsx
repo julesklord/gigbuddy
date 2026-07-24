@@ -109,6 +109,7 @@ export const MetronomePlugin: React.FC = () => {
         </div>
         <input 
           type="range" 
+          aria-label="Metronome BPM"
           min="40" 
           max="240" 
           value={bpm} 
