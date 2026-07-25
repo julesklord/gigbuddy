@@ -3722,6 +3722,7 @@ export default function App() {
                     <div className="flex justify-between items-start mb-4 relative z-10">
                       <div>
                         <h3
+                          id="live-sync-heading"
                           className={cn(
                             "text-lg font-bold tracking-tight mb-1 flex items-center gap-2",
                             isLiveSyncEnabled
@@ -3744,9 +3745,13 @@ export default function App() {
                         </Badge>
                       </div>
                       <button
+                        role="switch"
+                        aria-checked={isLiveSyncEnabled}
+                        aria-labelledby="live-sync-heading"
+                        aria-describedby="live-sync-desc"
                         onClick={() => setIsLiveSyncEnabled(!isLiveSyncEnabled)}
                         className={cn(
-                          "w-14 h-8 rounded-full transition-colors flex items-center px-1 shrink-0 shadow-inner",
+                          "w-14 h-8 rounded-full transition-colors flex items-center px-1 shrink-0 shadow-inner focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep focus-visible:outline-none",
                           isLiveSyncEnabled ? "bg-brand" : "bg-bg-deep/50",
                         )}
                       >
@@ -3761,7 +3766,7 @@ export default function App() {
                       </button>
                     </div>
 
-                    <p className="text-xs text-text-dim leading-relaxed relative z-10">
+                    <p id="live-sync-desc" className="text-xs text-text-dim leading-relaxed relative z-10">
                       When enabled, any song selected by the band leader will
                       automatically change on all members' screens over the
                       network in real-time.
