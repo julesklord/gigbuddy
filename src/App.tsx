@@ -2602,6 +2602,7 @@ export default function App() {
                             type="button"
                             onClick={() => setIsSavingSetlist(false)}
                             className="px-2 h-8 bg-text-bright/5 text-[10px] uppercase rounded"
+                            aria-label="Cancel saving setlist"
                           >
                             X
                           </button>
@@ -2642,6 +2643,7 @@ export default function App() {
                             type="button"
                             onClick={() => setIsAddingSong(false)}
                             className="px-2 py-1 bg-text-bright/5 text-[10px] uppercase rounded"
+                            aria-label="Cancel adding song"
                           >
                             X
                           </button>

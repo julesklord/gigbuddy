@@ -106,7 +106,7 @@ export const GlobalSettingsView: React.FC<{
           <div className="bg-bg-card border border-border-main rounded-xl p-4 sm:p-6 space-y-8">
             <div className="flex flex-col gap-2">
               <div className="flex justify-between items-center">
-                <label className="text-sm font-bold">
+                <label htmlFor="scroll-speed" className="text-sm font-bold">
                   Velocidad Auto-Scroll Base
                 </label>
                 <span className="text-brand font-mono">
@@ -117,6 +117,7 @@ export const GlobalSettingsView: React.FC<{
                 Ajusta el multiplicador base para el teleprompter en general.
               </p>
               <input
+                id="scroll-speed"
                 type="range"
                 aria-label="Teleprompter speed multiplier"
                 min="0.5"
@@ -132,7 +133,7 @@ export const GlobalSettingsView: React.FC<{
 
             <div className="flex flex-col gap-2">
               <div className="flex justify-between items-center">
-                <label className="text-sm font-bold">Tamaño de Texto</label>
+                <label htmlFor="text-size" className="text-sm font-bold">Tamaño de Texto</label>
                 <span className="text-brand font-mono">
                   {(textSizeMultiplier * 100).toFixed(0)}%
                 </span>
@@ -141,6 +142,7 @@ export const GlobalSettingsView: React.FC<{
                 Ajusta el tamaño global de las letras y acordes.
               </p>
               <input
+                id="text-size"
                 type="range"
                 aria-label="Text size multiplier"
                 min="0.5"
