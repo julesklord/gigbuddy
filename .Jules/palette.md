@@ -17,3 +17,7 @@
 
 **Learning:** Custom UI components built using standard `<button>` elements to look like toggle switches are often missing critical semantic information. Without `role="switch"` and `aria-checked`, screen readers identify them simply as buttons, and without linking surrounding context via `aria-labelledby` and `aria-describedby`, their purpose is unclear.
 **Action:** Always add `role="switch"` and dynamically update `aria-checked` on custom toggle switches. Additionally, use `aria-labelledby` and `aria-describedby` to explicitly connect the switch to its visible label and descriptive text, ensuring a fully accessible experience.
+## 2024-11-20 - Linked Labels for Range Inputs
+
+**Learning:** Range inputs for settings (like scroll speed and text size) had descriptive text that looked like labels but were not programmatically associated using `htmlFor` and `id`, making it difficult for screen readers to properly associate the inputs with their purpose.
+**Action:** Always link visible `<label>` elements to their corresponding `<input>` elements using matching `htmlFor` and `id` attributes.
