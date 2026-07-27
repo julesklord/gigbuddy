@@ -12,3 +12,7 @@
 
 **Learning:** Range sliders (e.g., speed, BPM, text size) and standalone textareas (e.g., collaborative notes) often rely purely on surrounding text or placeholders for context. Screen readers cannot properly identify the purpose of these inputs without a direct association or explicit semantic labeling, leading to a confusing experience.
 **Action:** When a visually associated `<label>` tag is missing or impractical (due to design constraints), explicitly provide an `aria-label` attribute on `<input>` and `<textarea>` elements so screen readers can accurately communicate their purpose.
+## 2024-11-20 - Linked Labels for Range Inputs
+
+**Learning:** Range inputs for settings (like scroll speed and text size) had descriptive text that looked like labels but were not programmatically associated using `htmlFor` and `id`, making it difficult for screen readers to properly associate the inputs with their purpose.
+**Action:** Always link visible `<label>` elements to their corresponding `<input>` elements using matching `htmlFor` and `id` attributes.
