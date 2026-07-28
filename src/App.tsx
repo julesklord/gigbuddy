@@ -1936,7 +1936,8 @@ export default function App() {
         {/* Quick Back Overlay (Floating Mobile) */}
         <button
           onClick={() => setIsLiveViewActive(false)}
-          className="lg:hidden absolute bottom-6 right-6 w-12 h-12 bg-text-bright text-bg-deep rounded-full shadow-[0_0_20px_rgba(255,255,255,0.3)] flex items-center justify-center z-50 active:scale-90 transition-transform"
+          className="lg:hidden absolute bottom-6 right-6 w-12 h-12 bg-text-bright text-bg-deep rounded-full shadow-[0_0_20px_rgba(255,255,255,0.3)] flex items-center justify-center z-50 active:scale-90 transition-transform focus-visible:ring-2 focus-visible:outline-none"
+          aria-label="Close live view"
         >
           <X size={24} />
         </button>
@@ -2096,7 +2097,8 @@ export default function App() {
                   </h2>
                   <button
                     onClick={() => setIsMenuOpen(false)}
-                    className="text-text-bright"
+                    className="text-text-bright focus-visible:ring-2 focus-visible:outline-none rounded"
+                    aria-label="Close menu"
                   >
                     <X size={24} />
                   </button>
@@ -2252,7 +2254,8 @@ export default function App() {
                   )}
                   <button
                     onClick={() => setMobileView("stage")}
-                    className="lg:hidden p-1 text-text-bright"
+                    className="lg:hidden p-1 text-text-bright focus-visible:ring-2 focus-visible:outline-none rounded"
+                    aria-label="Close menu"
                   >
                     <X size={16} />
                   </button>
@@ -3240,7 +3243,8 @@ export default function App() {
                                       notes: newNotes,
                                     });
                                   }}
-                                  className="p-2 text-red-500 hover:bg-red-500/10 rounded"
+                                  className="p-2 text-red-500 hover:bg-red-500/10 rounded focus-visible:ring-2 focus-visible:outline-none"
+                                  aria-label="Remove note"
                                 >
                                   <X size={14} />
                                 </button>
@@ -3669,7 +3673,8 @@ export default function App() {
                 <div className="flex items-center gap-1">
                   <button
                     onClick={() => setMobileView("stage")}
-                    className="lg:hidden p-2 text-text-bright"
+                    className="lg:hidden p-2 text-text-bright focus-visible:ring-2 focus-visible:outline-none rounded"
+                    aria-label="Close session tools"
                   >
                     <X size={16} />
                   </button>
@@ -3986,7 +3991,8 @@ export default function App() {
                   onClick={() =>
                     setMediaSource({ type: "none", isActive: false })
                   }
-                  className="text-text-dim hover:text-text-bright"
+                  className="text-text-dim hover:text-text-bright focus-visible:ring-2 focus-visible:outline-none rounded"
+                  aria-label="Close YouTube dock"
                 >
                   <X size={14} />
                 </button>
@@ -4026,7 +4032,8 @@ export default function App() {
                 </div>
                 <button
                   onClick={() => setViewingSongId(null)}
-                  className="p-2 hover:bg-text-bright/10 rounded-full text-text-dim transition-colors"
+                  className="p-2 hover:bg-text-bright/10 rounded-full text-text-dim transition-colors focus-visible:ring-2 focus-visible:outline-none"
+                  aria-label="Close preview"
                 >
                   <X size={20} />
                 </button>

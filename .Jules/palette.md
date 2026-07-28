@@ -26,3 +26,8 @@
 
 **Learning:** Several icon-only buttons relied solely on the `title` attribute for accessibility. While `title` provides a tooltip on hover for mouse users, it is not consistently announced by all screen readers across different platforms, making it insufficient for full accessibility.
 **Action:** A `title` attribute is not a substitute for an `aria-label` on icon-only buttons. Always explicitly include an `aria-label` alongside the `title` (or instead of it) to ensure robust screen reader accessibility.
+
+## 2024-11-20 - Explicit ARIA Labels for Icon-Only Close Buttons
+
+**Learning:** Across the application, numerous icon-only "Close" buttons (using the `<X />` icon) lacked semantic meaning for screen readers, as they had no `aria-label` or `title`. They also lacked visible keyboard focus indicators, impacting keyboard navigation.
+**Action:** Always add explicit `aria-label="Close"` (or a context-specific label like "Close menu") and visible focus states (e.g., `focus-visible:ring-2 focus-visible:outline-none`) to icon-only buttons to ensure they are accessible to both screen readers and keyboard users.
