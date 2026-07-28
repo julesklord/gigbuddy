@@ -1594,6 +1594,7 @@ export default function App() {
                 onClick={() => setIsLiveViewActive(false)}
                 className="hidden lg:flex items-center gap-1.5 ml-2 lg:ml-4 px-2 py-0.5 rounded bg-text-bright/5 hover:bg-text-bright/10 border border-text-bright/5 text-[10px] uppercase font-bold tracking-widest text-text-dim hover:text-text-bright transition-colors"
                 title="Return to Dashboard"
+                aria-label="Return to Dashboard"
               >
                 <ExternalLink size={12} />
                 Dashboard
@@ -1605,6 +1606,7 @@ export default function App() {
                 }}
                 className="flex items-center gap-1.5 ml-2 lg:ml-2 px-2 py-0.5 rounded bg-text-bright/5 hover:bg-text-bright/10 border border-text-bright/5 text-[10px] uppercase font-bold tracking-widest text-text-dim hover:text-text-bright transition-colors"
                 title="Stage Settings"
+                aria-label="Stage Settings"
               >
                 <Settings size={12} />
                 <span className="hidden lg:inline">Settings</span>
@@ -2234,6 +2236,7 @@ export default function App() {
                         onClick={() => handleExportPDF("setlist")}
                         className="text-text-dim hover:text-text-bright p-1"
                         title="Export PDF"
+                        aria-label="Export PDF"
                       >
                         <Printer size={12} />
                       </button>
@@ -2661,6 +2664,7 @@ export default function App() {
                           onClick={() => fileInputRef.current?.click()}
                           className="px-3 py-2 bg-text-bright/5 border border-border-main text-text-bright/70 hover:text-text-bright text-[10px] font-bold uppercase tracking-widest rounded flex items-center justify-center transition-all"
                           title="Import JSON Library"
+                          aria-label="Import JSON Library"
                         >
                           <Upload size={14} />
                         </button>
@@ -2668,6 +2672,7 @@ export default function App() {
                           onClick={() => handleExportPDF("library")}
                           className="px-3 py-2 bg-text-bright/5 border border-border-main text-text-bright/70 hover:text-text-bright text-[10px] font-bold uppercase tracking-widest rounded flex items-center justify-center transition-all"
                           title="Export Library PDF"
+                          aria-label="Export Library PDF"
                         >
                           <Printer size={14} />
                         </button>
@@ -2833,6 +2838,7 @@ export default function App() {
                               : "text-amber-500",
                         )}
                         title="Configure Live Sync"
+                        aria-label="Configure Live Sync"
                       >
                         REAL-TIME SYNC:{" "}
                         {!(bandId || gigId)
@@ -2875,6 +2881,11 @@ export default function App() {
                                   : "text-text-dim hover:text-text-bright",
                               )}
                               title={
+                                isAutoScrollEnabled
+                                  ? "Teleprompter Ready (Plays when audio plays)"
+                                  : "Enable Teleprompter"
+                              }
+                              aria-label={
                                 isAutoScrollEnabled
                                   ? "Teleprompter Ready (Plays when audio plays)"
                                   : "Enable Teleprompter"
@@ -2925,6 +2936,7 @@ export default function App() {
                         onClick={() => setAppView("globalSettings")}
                         className="p-2 bg-text-bright/5 hover:bg-text-bright/10 rounded-lg text-text-dim hover:text-brand transition-all flex items-center gap-2 text-xs h-full"
                         title="Display & Stage Settings"
+                        aria-label="Display & Stage Settings"
                       >
                         <Settings size={14} />
                       </button>
@@ -2960,6 +2972,7 @@ export default function App() {
                             onClick={() => setIsYouTubeDocked(false)}
                             className="text-text-dim hover:text-text-bright text-[10px] flex items-center gap-1 uppercase tracking-widest font-mono"
                             title="Pop out"
+                            aria-label="Pop out"
                           >
                             <LayoutTemplate size={12} /> Float
                           </button>
@@ -2969,6 +2982,7 @@ export default function App() {
                             }
                             className="text-text-dim hover:text-text-bright"
                             title="Close"
+                            aria-label="Close"
                           >
                             <X size={14} />
                           </button>
@@ -3768,7 +3782,10 @@ export default function App() {
                       </button>
                     </div>
 
-                    <p id="live-sync-desc" className="text-xs text-text-dim leading-relaxed relative z-10">
+                    <p
+                      id="live-sync-desc"
+                      className="text-xs text-text-dim leading-relaxed relative z-10"
+                    >
                       When enabled, any song selected by the band leader will
                       automatically change on all members' screens over the
                       network in real-time.

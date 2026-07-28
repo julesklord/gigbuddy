@@ -21,3 +21,8 @@
 
 **Learning:** Range inputs for settings (like scroll speed and text size) had descriptive text that looked like labels but were not programmatically associated using `htmlFor` and `id`, making it difficult for screen readers to properly associate the inputs with their purpose.
 **Action:** Always link visible `<label>` elements to their corresponding `<input>` elements using matching `htmlFor` and `id` attributes.
+
+## 2024-11-20 - Missing ARIA Labels on Icon-only Buttons relying on titles
+
+**Learning:** Several icon-only buttons relied solely on the `title` attribute for accessibility. While `title` provides a tooltip on hover for mouse users, it is not consistently announced by all screen readers across different platforms, making it insufficient for full accessibility.
+**Action:** A `title` attribute is not a substitute for an `aria-label` on icon-only buttons. Always explicitly include an `aria-label` alongside the `title` (or instead of it) to ensure robust screen reader accessibility.
