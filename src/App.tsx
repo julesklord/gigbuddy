@@ -1834,7 +1834,7 @@ export default function App() {
             <div className="flex items-center gap-6 px-8 py-4">
               <button
                 onClick={skipBackward}
-                className="text-text-dim hover:text-text-bright transition-colors"
+                className="text-text-dim hover:text-text-bright transition-colors focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep rounded-full p-2"
                 aria-label="Skip Backward"
               >
                 <SkipBack size={24} />
@@ -1842,7 +1842,7 @@ export default function App() {
               <motion.button
                 whileTap={{ scale: 0.9 }}
                 onClick={togglePlayback}
-                className="w-12 h-12 flex items-center justify-center bg-text-bright text-bg-deep rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+                className="w-12 h-12 flex items-center justify-center bg-text-bright text-bg-deep rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep"
                 aria-label={isPlaying ? "Pause" : "Play"}
               >
                 {isPlaying ? (
@@ -1853,7 +1853,7 @@ export default function App() {
               </motion.button>
               <button
                 onClick={skipForward}
-                className="text-text-dim hover:text-text-bright transition-colors"
+                className="text-text-dim hover:text-text-bright transition-colors focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep rounded-full p-2"
                 aria-label="Skip Forward"
               >
                 <SkipForward size={24} />
@@ -1861,7 +1861,7 @@ export default function App() {
               <div className="w-px h-6 bg-text-bright/20 mx-2"></div>
               <button
                 onClick={() => setIsTransportFloating(!isTransportFloating)}
-                className="text-text-dim hover:text-text-bright transition-colors"
+                className="text-text-dim hover:text-text-bright transition-colors focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep rounded-full p-2"
                 title="Dock Transport"
                 aria-label="Dock Transport"
               >
@@ -1886,14 +1886,14 @@ export default function App() {
             <div className="flex w-full items-center justify-center gap-8 pt-4">
               <button
                 onClick={skipBackward}
-                className="text-text-dim hover:text-brand transition-colors p-2"
+                className="text-text-dim hover:text-brand transition-colors p-2 focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep rounded-full"
                 aria-label="Skip Backward"
               >
                 <SkipBack size={24} className="lg:w-7 lg:h-7" />
               </button>
               <button
                 onClick={togglePlayback}
-                className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center bg-brand text-brand-contrast rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,69,0,0.2)]"
+                className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center bg-brand text-brand-contrast rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,69,0,0.2)] focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep"
                 aria-label={isPlaying ? "Pause" : "Play"}
               >
                 {isPlaying ? (
@@ -1912,7 +1912,7 @@ export default function App() {
               </button>
               <button
                 onClick={skipForward}
-                className="text-text-dim hover:text-brand transition-colors p-2"
+                className="text-text-dim hover:text-brand transition-colors p-2 focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep rounded-full"
                 aria-label="Skip Forward"
               >
                 <SkipForward size={24} className="lg:w-7 lg:h-7" />
@@ -1925,6 +1925,7 @@ export default function App() {
                 size="icon"
                 onClick={() => setIsTransportFloating(!isTransportFloating)}
                 title="Toggle Floating UI"
+                aria-label="Toggle Floating UI"
                 className="h-10 w-10"
               >
                 <Layers size={16} />
@@ -3530,7 +3531,7 @@ export default function App() {
                 <div className="flex items-center gap-6 px-8 py-4">
                   <button
                     onClick={skipBackward}
-                    className="text-text-dim hover:text-text-bright transition-colors"
+                    className="text-text-dim hover:text-text-bright transition-colors focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep rounded-full p-2"
                     aria-label="Skip Backward"
                   >
                     <SkipBack size={24} />
@@ -3538,7 +3539,7 @@ export default function App() {
                   <motion.button
                     whileTap={{ scale: 0.9 }}
                     onClick={togglePlayback}
-                    className="w-12 h-12 flex items-center justify-center bg-text-bright text-bg-deep rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+                    className="w-12 h-12 flex items-center justify-center bg-text-bright text-bg-deep rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep"
                     aria-label={isPlaying ? "Pause" : "Play"}
                   >
                     {isPlaying ? (
@@ -3549,7 +3550,7 @@ export default function App() {
                   </motion.button>
                   <button
                     onClick={skipForward}
-                    className="text-text-dim hover:text-text-bright transition-colors"
+                    className="text-text-dim hover:text-text-bright transition-colors focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep rounded-full p-2"
                     aria-label="Skip Forward"
                   >
                     <SkipForward size={24} />
@@ -3557,7 +3558,7 @@ export default function App() {
                   <div className="w-px h-6 bg-text-bright/20 mx-2"></div>
                   <button
                     onClick={() => setIsTransportFloating(!isTransportFloating)}
-                    className="text-text-dim hover:text-text-bright transition-colors"
+                    className="text-text-dim hover:text-text-bright transition-colors focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep rounded-full p-2"
                     title="Dock Transport"
                     aria-label="Dock Transport"
                   >
@@ -3600,7 +3601,7 @@ export default function App() {
                   <div className="flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 xl:gap-10">
                     <button
                       onClick={skipBackward}
-                      className="p-2 rounded-full text-text-dim hover:text-brand hover:bg-text-bright/5 active:scale-90 transition-all"
+                      className="p-2 rounded-full text-text-dim hover:text-brand hover:bg-text-bright/5 active:scale-90 transition-all focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep"
                       aria-label="Skip Backward"
                     >
                       <SkipBack
@@ -3611,7 +3612,7 @@ export default function App() {
                     <motion.button
                       whileTap={{ scale: 0.9 }}
                       onClick={togglePlayback}
-                      className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full bg-brand text-brand-contrast hover:scale-105 active:scale-95 transition-transform shadow-[0_0_20px_rgba(255,69,0,0.3)]"
+                      className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full bg-brand text-brand-contrast hover:scale-105 active:scale-95 transition-transform shadow-[0_0_20px_rgba(255,69,0,0.3)] focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep"
                       aria-label={isPlaying ? "Pause" : "Play"}
                     >
                       {isPlaying ? (
@@ -3630,7 +3631,7 @@ export default function App() {
                     </motion.button>
                     <button
                       onClick={skipForward}
-                      className="p-2 rounded-full text-text-dim hover:text-brand hover:bg-text-bright/5 active:scale-90 transition-all"
+                      className="p-2 rounded-full text-text-dim hover:text-brand hover:bg-text-bright/5 active:scale-90 transition-all focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep"
                       aria-label="Skip Forward"
                     >
                       <SkipForward
@@ -3650,6 +3651,7 @@ export default function App() {
                         setIsTransportFloating(!isTransportFloating)
                       }
                       title="Toggle Floating UI"
+                      aria-label="Toggle Floating UI"
                       className="h-8 w-8 xl:h-10 xl:w-10"
                     >
                       <Layers size={16} className="xl:base" />

@@ -31,3 +31,7 @@
 
 **Learning:** Across the application, numerous icon-only "Close" buttons (using the `<X />` icon) lacked semantic meaning for screen readers, as they had no `aria-label` or `title`. They also lacked visible keyboard focus indicators, impacting keyboard navigation.
 **Action:** Always add explicit `aria-label="Close"` (or a context-specific label like "Close menu") and visible focus states (e.g., `focus-visible:ring-2 focus-visible:outline-none`) to icon-only buttons to ensure they are accessible to both screen readers and keyboard users.
+
+## 2024-11-20 - Missing Focus States on Critical Media Controls
+**Learning:** The primary media transport controls (Play/Pause, Skip Back, Skip Forward) were styled for mouse interaction with hover scaling and shadows, but completely lacked `focus-visible` indicators. This made it impossible for keyboard-only users to know when they had focused these interactive playback controls.
+**Action:** Always include prominent `focus-visible` styles (e.g., `focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:outline-none`) on critical interactive media controls to ensure keyboard accessibility matches visual polish.
