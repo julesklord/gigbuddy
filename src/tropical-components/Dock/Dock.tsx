@@ -88,7 +88,7 @@ export const DockPanel: React.FC<DockPanelProps> = ({
         <div className="dock-panel-header">
           {title && <span className="dock-panel-title">{title}</span>}
           {onClose && (
-            <button className="dock-panel-close" onClick={onClose}>
+            <button className="dock-panel-close focus-visible:ring-2 focus-visible:outline-none rounded" onClick={onClose} aria-label="Close panel">
               <i className="ti ti-x"></i>
             </button>
           )}
