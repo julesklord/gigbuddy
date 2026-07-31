@@ -35,3 +35,8 @@
 ## 2024-11-20 - Missing Focus States on Critical Media Controls
 **Learning:** The primary media transport controls (Play/Pause, Skip Back, Skip Forward) were styled for mouse interaction with hover scaling and shadows, but completely lacked `focus-visible` indicators. This made it impossible for keyboard-only users to know when they had focused these interactive playback controls.
 **Action:** Always include prominent `focus-visible` styles (e.g., `focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:outline-none`) on critical interactive media controls to ensure keyboard accessibility matches visual polish.
+
+## 2024-11-20 - ARIA Labels for Transpose Key Buttons
+
+**Learning:** Transpose key adjustment buttons in the live stage view relied solely on `–` and `+` symbols. This visual-only approach is opaque to screen readers, making it difficult for visually impaired musicians to adjust the key. Furthermore, the buttons lacked keyboard focus indicators.
+**Action:** Always verify that interactive buttons relying strictly on mathematical symbols or visual cues have descriptive `aria-label` attributes. Add explicit focus indicators like `focus-visible:ring-2` to ensure proper keyboard accessibility.
