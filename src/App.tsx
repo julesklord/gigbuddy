@@ -1625,7 +1625,8 @@ export default function App() {
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setTransposeOffset((prev) => prev - 1)}
-                  className="w-5 h-5 lg:w-8 lg:h-8 flex items-center justify-center bg-text-bright/5 border border-border-main rounded text-[10px] lg:text-base hover:bg-text-bright/10"
+                  aria-label="Decrease Key"
+                  className="w-5 h-5 lg:w-8 lg:h-8 flex items-center justify-center bg-text-bright/5 border border-border-main rounded text-[10px] lg:text-base hover:bg-text-bright/10 focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand"
                 >
                   –
                 </button>
@@ -1634,7 +1635,8 @@ export default function App() {
                 </span>
                 <button
                   onClick={() => setTransposeOffset((prev) => prev + 1)}
-                  className="w-5 h-5 lg:w-8 lg:h-8 flex items-center justify-center bg-text-bright/5 border border-border-main rounded text-[10px] lg:text-base hover:bg-text-bright/10"
+                  aria-label="Increase Key"
+                  className="w-5 h-5 lg:w-8 lg:h-8 flex items-center justify-center bg-text-bright/5 border border-border-main rounded text-[10px] lg:text-base hover:bg-text-bright/10 focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand"
                 >
                   +
                 </button>
