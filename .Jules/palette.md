@@ -40,3 +40,7 @@
 
 **Learning:** Transpose key adjustment buttons in the live stage view relied solely on `–` and `+` symbols. This visual-only approach is opaque to screen readers, making it difficult for visually impaired musicians to adjust the key. Furthermore, the buttons lacked keyboard focus indicators.
 **Action:** Always verify that interactive buttons relying strictly on mathematical symbols or visual cues have descriptive `aria-label` attributes. Add explicit focus indicators like `focus-visible:ring-2` to ensure proper keyboard accessibility.
+
+## 2024-11-20 - Accessible Dashed Action Buttons
+**Learning:** Dashed action buttons that rely on text like "+ Add..." or visual symbols for their action context need explicit `aria-label` attributes to ensure screen readers understand their function without context ambiguity, and they must always include explicit `focus-visible` styles like `focus-visible:ring-2` to remain accessible to keyboard navigation since they are interactive elements, even if they look like simple dashed boxes.
+**Action:** When creating or modifying dashed "add" or "upload" style action buttons, always ensure they have an explicit `aria-label` and `focus-visible` states mapping to brand colors for keyboard accessibility.
