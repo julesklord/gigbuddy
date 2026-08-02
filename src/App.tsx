@@ -3833,7 +3833,10 @@ export default function App() {
                     </div>
                   ))}
 
-                  <button className="w-full p-2 border border-dashed border-border-main text-[10px] uppercase text-text-dim hover:text-brand hover:border-brand/40 transition-all mb-8">
+                  <button
+                    aria-label="Add Performance Note"
+                    className="w-full p-2 border border-dashed border-border-main text-[10px] uppercase text-text-dim hover:text-brand hover:border-brand/40 transition-all focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand mb-8"
+                  >
                     + Add Performance Note
                   </button>
 
