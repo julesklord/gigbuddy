@@ -40,3 +40,6 @@
 
 **Learning:** Transpose key adjustment buttons in the live stage view relied solely on `–` and `+` symbols. This visual-only approach is opaque to screen readers, making it difficult for visually impaired musicians to adjust the key. Furthermore, the buttons lacked keyboard focus indicators.
 **Action:** Always verify that interactive buttons relying strictly on mathematical symbols or visual cues have descriptive `aria-label` attributes. Add explicit focus indicators like `focus-visible:ring-2` to ensure proper keyboard accessibility.
+## 2024-11-06 - Improve screen reader context for icon+text buttons
+**Learning:** Buttons with minimal text (like 'Up' or 'Down') alongside an icon may lack context for screen reader users when removed from their surrounding visual layout. Relying on visual context alone creates an accessibility barrier.
+**Action:** Always add descriptive `aria-label` attributes to buttons that use abbreviated text or text that relies heavily on visual context, ensuring screen reader users understand the full action (e.g. 'Move song up' instead of just 'Up').

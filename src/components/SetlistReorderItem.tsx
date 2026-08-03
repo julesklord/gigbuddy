@@ -72,14 +72,16 @@ export const SetlistReorderItem: React.FC<SetlistReorderItemProps> = ({
         <button 
           onClick={(e) => { e.stopPropagation(); onMove(index, 'up'); }}
           disabled={index === 0}
-          className="p-2 hover:bg-text-bright/10 rounded disabled:opacity-30 flex items-center gap-1 text-[10px] font-bold uppercase transition-all"
+          aria-label="Move song up"
+          className="p-2 hover:bg-text-bright/10 rounded disabled:opacity-30 flex items-center gap-1 text-[10px] font-bold uppercase transition-all focus-visible:ring-2 focus-visible:outline-none"
         >
           <ChevronRight size={14} className="-rotate-90" /> Up
         </button>
         <button 
           onClick={(e) => { e.stopPropagation(); onMove(index, 'down'); }}
           disabled={index === totalSongs - 1}
-          className="p-2 hover:bg-text-bright/10 rounded disabled:opacity-30 flex items-center gap-1 text-[10px] font-bold uppercase transition-all"
+          aria-label="Move song down"
+          className="p-2 hover:bg-text-bright/10 rounded disabled:opacity-30 flex items-center gap-1 text-[10px] font-bold uppercase transition-all focus-visible:ring-2 focus-visible:outline-none"
         >
           <ChevronRight size={14} className="rotate-90" /> Down
         </button>
