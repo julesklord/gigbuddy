@@ -43,3 +43,7 @@
 ## 2024-11-06 - Improve screen reader context for icon+text buttons
 **Learning:** Buttons with minimal text (like 'Up' or 'Down') alongside an icon may lack context for screen reader users when removed from their surrounding visual layout. Relying on visual context alone creates an accessibility barrier.
 **Action:** Always add descriptive `aria-label` attributes to buttons that use abbreviated text or text that relies heavily on visual context, ensuring screen reader users understand the full action (e.g. 'Move song up' instead of just 'Up').
+
+## 2024-11-20 - Decibel Meter Accessibility Improvements
+**Learning:** Tools that use interactive states for UI overlays or toggling monitoring (like a decibel meter) often forget `aria-expanded` attributes on the overlay toggle button, and `aria-label` attributes on icon-only start/stop buttons. Additionally, nested utility buttons like "Reset Peak" were missing `focus-visible` styles, rendering them invisible to keyboard navigation.
+**Action:** Always ensure overlay toggles have `aria-expanded` dynamically updated, icon-only toggle buttons have descriptive `aria-label` attributes reflecting their current state, and all interactive elements maintain visible focus states (`focus-visible:ring-2 focus-visible:outline-none`).
