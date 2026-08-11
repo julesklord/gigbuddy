@@ -532,7 +532,7 @@ export const GlobalSettingsView: React.FC<{
               })}
             </Reorder.Group>
             <p className="text-[10px] text-text-dim mt-4 flex items-center gap-2">
-              <GripVertical size={12} className="opacity-50" />
+              <GripVertical size={12} className="opacity-50" aria-hidden="true" />
               Drag elements to reorder them on your stage. Tap the eye icon to
               hide/show them.
             </p>
