@@ -37,6 +37,7 @@ export const SetlistReorderItem: React.FC<SetlistReorderItemProps> = ({
           <div 
             className="text-text-dim/50 hover:text-text-bright transition-colors cursor-grab active:cursor-grabbing p-2 shrink-0 touch-none"
             onPointerDown={(e) => dragControls.start(e)}
+            aria-hidden="true"
           >
             <GripVertical size={16} />
           </div>

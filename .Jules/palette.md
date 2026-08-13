@@ -43,3 +43,8 @@
 ## 2024-11-06 - Improve screen reader context for icon+text buttons
 **Learning:** Buttons with minimal text (like 'Up' or 'Down') alongside an icon may lack context for screen reader users when removed from their surrounding visual layout. Relying on visual context alone creates an accessibility barrier.
 **Action:** Always add descriptive `aria-label` attributes to buttons that use abbreviated text or text that relies heavily on visual context, ensuring screen reader users understand the full action (e.g. 'Move song up' instead of just 'Up').
+
+## 2024-11-20 - Screen Reader Noise Reduction on Visual Drag Handles
+
+**Learning:** Drag handles intended strictly for pointer/touch interactions create redundant noise for screen reader users when accessible keyboard alternatives (like explicit Up/Down buttons) already exist in the component.
+**Action:** Always add `aria-hidden="true"` to purely visual drag handles to streamline the screen reader experience and rely on the explicit semantic buttons for keyboard/assistive navigation.
