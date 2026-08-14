@@ -48,3 +48,7 @@
 
 **Learning:** Drag handles intended strictly for pointer/touch interactions create redundant noise for screen reader users when accessible keyboard alternatives (like explicit Up/Down buttons) already exist in the component.
 **Action:** Always add `aria-hidden="true"` to purely visual drag handles to streamline the screen reader experience and rely on the explicit semantic buttons for keyboard/assistive navigation.
+
+## 2024-11-20 - Add ARIA Labels to Dynamic Buttons
+**Learning:** Found dynamic state-based buttons (like Start/Stop Monitoring in the decibel meter) that change their function and title attribute, but lacked a corresponding `aria-label`. Screen readers need an explicit label that reflects the current dynamic state just like visual tooltips (`title`) do.
+**Action:** When a button's primary semantic meaning is conveyed via a dynamic `title` attribute for pointer users, always ensure there is a matching dynamic `aria-label` for screen reader users.

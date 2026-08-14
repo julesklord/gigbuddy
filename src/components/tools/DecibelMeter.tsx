@@ -127,6 +127,7 @@ export const DecibelMeter: React.FC = () => {
                 isListening ? "bg-red-500 text-white hover:bg-red-600" : "bg-brand text-black hover:bg-brand/80"
               )}
               title={isListening ? "Stop Monitoring" : "Start Monitoring"}
+              aria-label={isListening ? "Stop Monitoring" : "Start Monitoring"}
             >
               {isListening ? <MicOff size={14} /> : <Mic size={14} />}
             </button>
