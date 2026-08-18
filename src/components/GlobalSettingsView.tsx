@@ -127,13 +127,15 @@ export const GlobalSettingsView: React.FC<{
                 onChange={(e) =>
                   setScrollSpeedMultiplier(parseFloat(e.target.value))
                 }
-                className="w-full h-2 bg-text-bright/10 rounded-lg appearance-none cursor-pointer accent-brand"
+                className="w-full accent-brand bg-text-bright/20 h-2 rounded-lg appearance-none cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep"
               />
             </div>
 
             <div className="flex flex-col gap-2">
               <div className="flex justify-between items-center">
-                <label htmlFor="text-size" className="text-sm font-bold">Tamaño de Texto</label>
+                <label htmlFor="text-size" className="text-sm font-bold">
+                  Tamaño de Texto
+                </label>
                 <span className="text-brand font-mono">
                   {(textSizeMultiplier * 100).toFixed(0)}%
                 </span>
@@ -152,7 +154,7 @@ export const GlobalSettingsView: React.FC<{
                 onChange={(e) =>
                   setTextSizeMultiplier(parseFloat(e.target.value))
                 }
-                className="w-full h-2 bg-text-bright/10 rounded-lg appearance-none cursor-pointer accent-brand"
+                className="w-full accent-brand bg-text-bright/20 h-2 rounded-lg appearance-none cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep"
               />
             </div>
 
@@ -279,8 +281,13 @@ export const GlobalSettingsView: React.FC<{
 
             <div className="flex items-center justify-between border-t border-text-bright/5 pt-6">
               <div className="space-y-1 pr-4">
-                <h3 id="floating-transport-label" className="text-sm font-bold">Floating Transport Bar</h3>
-                <p id="floating-transport-desc" className="text-[10px] text-text-dim leading-relaxed">
+                <h3 id="floating-transport-label" className="text-sm font-bold">
+                  Floating Transport Bar
+                </h3>
+                <p
+                  id="floating-transport-desc"
+                  className="text-[10px] text-text-dim leading-relaxed"
+                >
                   When enabled, the playback bar will float in the center. When
                   disabled, it stays fixed at the bottom stretching across the
                   screen.
@@ -552,8 +559,13 @@ export const GlobalSettingsView: React.FC<{
           <div className="bg-bg-card border border-border-main rounded-xl p-4 sm:p-6">
             <div className="flex items-center justify-between">
               <div className="space-y-1 pr-4">
-                <h3 id="live-sync-label" className="font-bold">Real-time Stage Sync</h3>
-                <p id="live-sync-desc" className="text-[10px] text-text-dim leading-relaxed">
+                <h3 id="live-sync-label" className="font-bold">
+                  Real-time Stage Sync
+                </h3>
+                <p
+                  id="live-sync-desc"
+                  className="text-[10px] text-text-dim leading-relaxed"
+                >
                   When enabled, any song selected by the band leader will
                   automatically change on all members' screens over the network.
                 </p>
