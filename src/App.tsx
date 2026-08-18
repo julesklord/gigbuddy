@@ -2385,8 +2385,12 @@ export default function App() {
                         ))}
 
                         {songs.length === 0 && (
-                          <div className="p-8 text-center text-text-dim text-xs uppercase font-mono tracking-widest opacity-40">
-                            No songs in library
+                          <div className="p-12 flex flex-col items-center justify-center text-center text-text-dim gap-3 animate-in fade-in duration-300">
+                            <div className="w-12 h-12 rounded-full bg-text-bright/5 flex items-center justify-center mb-2">
+                              <Music size={24} className="opacity-50" />
+                            </div>
+                            <p className="text-sm font-bold text-text-bright">Your library is empty</p>
+                            <p className="text-[10px] max-w-[200px] leading-relaxed">Click the + button to add a new song or import an existing library.</p>
                           </div>
                         )}
                       </Reorder.Group>
@@ -2478,8 +2482,12 @@ export default function App() {
                         ))}
 
                         {songs.length === 0 && (
-                          <div className="p-8 text-center text-text-dim text-xs uppercase font-mono tracking-widest opacity-40">
-                            No songs in library
+                          <div className="p-12 flex flex-col items-center justify-center text-center text-text-dim gap-3 animate-in fade-in duration-300">
+                            <div className="w-12 h-12 rounded-full bg-text-bright/5 flex items-center justify-center mb-2">
+                              <Music size={24} className="opacity-50" />
+                            </div>
+                            <p className="text-sm font-bold text-text-bright">Your library is empty</p>
+                            <p className="text-[10px] max-w-[200px] leading-relaxed">Click the + button to add a new song or import an existing library.</p>
                           </div>
                         )}
                       </div>
@@ -2487,8 +2495,12 @@ export default function App() {
                   ) : (
                     <div className="grow overflow-y-auto custom-scrollbar flex flex-col bg-bg-deep/20">
                       {filteredSongs.length === 0 ? (
-                        <div className="p-8 text-center text-text-dim">
-                          <p className="text-sm">No songs match your search.</p>
+                        <div className="p-12 flex flex-col items-center justify-center text-center text-text-dim gap-3 animate-in fade-in duration-300">
+                          <div className="w-12 h-12 rounded-full bg-text-bright/5 flex items-center justify-center mb-2">
+                            <Search size={24} className="opacity-50" />
+                          </div>
+                          <p className="text-sm font-bold text-text-bright">No songs match your search.</p>
+                          <p className="text-[10px]">Try adjusting your search terms.</p>
                         </div>
                       ) : (
                         filteredSongs.map((song) => {
@@ -3388,10 +3400,11 @@ export default function App() {
                       </div>
                     ) : (
                       <div className="grow flex flex-col gap-4">
-                        <span className="text-[10px] text-text-dim uppercase font-bold text-brand">
+                        <label htmlFor="json-live-buffer" className="text-[10px] text-text-dim uppercase font-bold text-brand block">
                           Advanced Mode: JSON Live Buffer
-                        </span>
+                        </label>
                         <textarea
+                          id="json-live-buffer"
                           value={editedLyrics}
                           onChange={(e) => {
                             setEditedLyrics(e.target.value);
