@@ -55,3 +55,7 @@
 ## 2024-11-20 - Enhanced Empty States and Missing Textarea Labels
 **Learning:** Plain text empty states (e.g., "No songs in library") feel unpolished and lack guidance. Additionally, the Advanced Mode JSON textarea lacked an explicitly associated label for screen readers.
 **Action:** When displaying empty states for lists or libraries, replace plain text placeholders with visually polished empty states that include relevant icons (e.g., from `lucide-react`) and helpful guidance or call-to-actions. Always link `<label>` tags to their corresponding form elements (like `<textarea>`) using matching `htmlFor` and `id` attributes.
+
+## 2024-11-20 - Missing Keyboard Focus States on Range Inputs
+**Learning:** Range slider inputs (`<input type="range">`) often have `appearance-none` applied for custom styling, which can inadvertently remove the browser's default focus ring. Without explicitly adding `focus-visible` utility classes, these interactive elements become invisible to keyboard users when navigating.
+**Action:** Always verify that custom-styled range inputs have explicit keyboard focus indicators (e.g., `focus-visible:ring-2 focus-visible:ring-brand focus-visible:outline-none`) to ensure accessibility.
