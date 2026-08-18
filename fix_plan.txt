@@ -1,0 +1,3 @@
+Instead of just "No songs in library", I can add a nice empty state with an icon and a call to action. But I'll need to check if there is an icon imported I can use (like `Music` or `Plus`).
+`src/App.tsx` already has a lot of Lucide icons.
+Let's see what is imported from `lucide-react` in `src/App.tsx`.

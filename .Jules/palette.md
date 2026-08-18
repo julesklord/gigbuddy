@@ -52,3 +52,8 @@
 ## 2024-11-20 - Add ARIA Labels to Dynamic Buttons
 **Learning:** Found dynamic state-based buttons (like Start/Stop Monitoring in the decibel meter) that change their function and title attribute, but lacked a corresponding `aria-label`. Screen readers need an explicit label that reflects the current dynamic state just like visual tooltips (`title`) do.
 **Action:** When a button's primary semantic meaning is conveyed via a dynamic `title` attribute for pointer users, always ensure there is a matching dynamic `aria-label` for screen reader users.
+
+## 2024-11-20 - Enhanced Empty States and Missing Textarea Labels
+
+**Learning:** Plain text empty states (e.g., "No songs in library") feel unpolished and lack guidance. Additionally, the Advanced Mode JSON textarea lacked an explicitly associated label for screen readers.
+**Action:** When displaying empty states for lists or libraries, replace plain text placeholders with visually polished empty states that include relevant icons (e.g., from `lucide-react`) and helpful guidance or call-to-actions. Always link `<label>` tags to their corresponding form elements (like `<textarea>`) using matching `htmlFor` and `id` attributes.
