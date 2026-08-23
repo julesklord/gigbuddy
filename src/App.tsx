@@ -2389,8 +2389,13 @@ export default function App() {
                             <div className="w-12 h-12 rounded-full bg-text-bright/5 flex items-center justify-center mb-2">
                               <Music size={24} className="opacity-50" />
                             </div>
-                            <p className="text-sm font-bold text-text-bright">Your library is empty</p>
-                            <p className="text-[10px] max-w-[200px] leading-relaxed">Click the + button to add a new song or import an existing library.</p>
+                            <p className="text-sm font-bold text-text-bright">
+                              Your library is empty
+                            </p>
+                            <p className="text-[10px] max-w-[200px] leading-relaxed">
+                              Click the + button to add a new song or import an
+                              existing library.
+                            </p>
                           </div>
                         )}
                       </Reorder.Group>
@@ -2486,8 +2491,13 @@ export default function App() {
                             <div className="w-12 h-12 rounded-full bg-text-bright/5 flex items-center justify-center mb-2">
                               <Music size={24} className="opacity-50" />
                             </div>
-                            <p className="text-sm font-bold text-text-bright">Your library is empty</p>
-                            <p className="text-[10px] max-w-[200px] leading-relaxed">Click the + button to add a new song or import an existing library.</p>
+                            <p className="text-sm font-bold text-text-bright">
+                              Your library is empty
+                            </p>
+                            <p className="text-[10px] max-w-[200px] leading-relaxed">
+                              Click the + button to add a new song or import an
+                              existing library.
+                            </p>
                           </div>
                         )}
                       </div>
@@ -2499,8 +2509,12 @@ export default function App() {
                           <div className="w-12 h-12 rounded-full bg-text-bright/5 flex items-center justify-center mb-2">
                             <Search size={24} className="opacity-50" />
                           </div>
-                          <p className="text-sm font-bold text-text-bright">No songs match your search.</p>
-                          <p className="text-[10px]">Try adjusting your search terms.</p>
+                          <p className="text-sm font-bold text-text-bright">
+                            No songs match your search.
+                          </p>
+                          <p className="text-[10px]">
+                            Try adjusting your search terms.
+                          </p>
                         </div>
                       ) : (
                         filteredSongs.map((song) => {
@@ -2930,7 +2944,7 @@ export default function App() {
                                     parseFloat(e.target.value),
                                   )
                                 }
-                                className="w-16 h-1 bg-text-bright/20 rounded-lg appearance-none cursor-pointer accent-brand"
+                                className="w-16 h-1 bg-text-bright/20 rounded-lg appearance-none cursor-pointer accent-brand focus-visible:ring-2 focus-visible:ring-brand focus-visible:outline-none"
                               />
                               <span className="text-[9px] text-brand font-mono">
                                 {scrollSpeedMultiplier.toFixed(1)}x
@@ -3400,7 +3414,10 @@ export default function App() {
                       </div>
                     ) : (
                       <div className="grow flex flex-col gap-4">
-                        <label htmlFor="json-live-buffer" className="text-[10px] text-text-dim uppercase font-bold text-brand block">
+                        <label
+                          htmlFor="json-live-buffer"
+                          className="text-[10px] text-text-dim uppercase font-bold text-brand block"
+                        >
                           Advanced Mode: JSON Live Buffer
                         </label>
                         <textarea
