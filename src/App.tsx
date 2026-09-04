@@ -2728,9 +2728,17 @@ export default function App() {
                 </div>
                 <div className="grow overflow-auto custom-scrollbar p-4 lg:p-6 space-y-4">
                   {savedSetlists.length === 0 ? (
-                    <div className="text-center opacity-50 py-10">
-                      <Layers size={32} className="mx-auto mb-3 opacity-30" />
-                      <p className="text-xs">No saved setlists.</p>
+                    <div className="p-12 flex flex-col items-center justify-center text-center text-text-dim gap-3 animate-in fade-in duration-300">
+                      <div className="w-12 h-12 rounded-full bg-text-bright/5 flex items-center justify-center mb-2">
+                        <Layers size={24} className="opacity-50" />
+                      </div>
+                      <p className="text-sm font-bold text-text-bright">
+                        No Saved Setlists
+                      </p>
+                      <p className="text-[10px] max-w-[200px] leading-relaxed">
+                        Save your current setlist to the library to access it
+                        later.
+                      </p>
                     </div>
                   ) : (
                     savedSetlists.map((saved) => (

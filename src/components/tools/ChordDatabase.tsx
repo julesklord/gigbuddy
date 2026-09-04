@@ -174,8 +174,16 @@ export const ChordDatabase: React.FC = () => {
               ))}
             </div>
           ) : (
-            <div className="text-center py-4 text-text-dim text-xs">
-              No chords found matching "{searchQuery}"
+            <div className="p-8 flex flex-col items-center justify-center text-center text-text-dim gap-3 animate-in fade-in duration-300">
+              <div className="w-10 h-10 rounded-full bg-text-bright/5 flex items-center justify-center mb-1">
+                <Search size={20} className="opacity-50" />
+              </div>
+              <p className="text-sm font-bold text-text-bright">
+                No chords found matching "{searchQuery}"
+              </p>
+              <p className="text-[10px] max-w-[200px] leading-relaxed">
+                Try a different search term or check the available chords below.
+              </p>
             </div>
           )
         ) : (
