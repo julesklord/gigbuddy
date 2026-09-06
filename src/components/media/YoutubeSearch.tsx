@@ -62,7 +62,7 @@ export const YoutubeSearch: React.FC<YoutubeSearchProps> = ({
               {onPlay ? (
                 <button
                   onClick={onPlay}
-                  className="text-[9px] flex items-center gap-1.5 text-white hover:text-white uppercase tracking-widest font-bold px-3 py-1.5 bg-[#FF0000] rounded hover:bg-[#FF0000]/80 transition-colors"
+                  className="text-[9px] flex items-center gap-1.5 text-white hover:text-white uppercase tracking-widest font-bold px-3 py-1.5 bg-[#FF0000] rounded hover:bg-[#FF0000]/80 transition-colors focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-[#FF0000] focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep"
                 >
                   <Play size={10} fill="currentColor" /> PLAY
                 </button>
@@ -72,7 +72,7 @@ export const YoutubeSearch: React.FC<YoutubeSearchProps> = ({
               {onClear && (
                 <button
                   onClick={onClear}
-                  className="text-[9px] text-text-dim hover:text-text-bright transition-colors uppercase tracking-widest font-bold px-2 py-1 bg-text-bright/5 hover:bg-text-bright/10 rounded"
+                  className="text-[9px] text-text-dim hover:text-text-bright transition-colors uppercase tracking-widest font-bold px-2 py-1 bg-text-bright/5 hover:bg-text-bright/10 rounded focus-visible:ring-2 focus-visible:outline-none"
                 >
                   REMOVE
                 </button>
@@ -112,7 +112,7 @@ export const YoutubeSearch: React.FC<YoutubeSearchProps> = ({
             <button
               key={video.id}
               onClick={() => onSelect(video)}
-              className={`flex gap-3 p-3 rounded-xl border text-left transition-all duration-200 group ${
+              className={`flex gap-3 p-3 rounded-xl border text-left transition-all duration-200 group focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-[#FF0000] focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep ${
                 currentVideoId === video.id
                   ? "bg-bg-deep/60 border-[#FF0000]/50 shadow-[0_0_15px_rgba(255,0,0,0.1)]"
                   : "bg-text-bright/5 border-white/5 hover:border-[#FF0000]/30 hover:bg-[#FF0000]/5 hover:shadow-lg hover:-translate-y-0.5"
