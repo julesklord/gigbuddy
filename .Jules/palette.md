@@ -55,3 +55,7 @@
 ## 2024-11-20 - Enhanced Empty States and Missing Textarea Labels
 **Learning:** Plain text empty states (e.g., "No songs in library") feel unpolished and lack guidance. Additionally, the Advanced Mode JSON textarea lacked an explicitly associated label for screen readers.
 **Action:** When displaying empty states for lists or libraries, replace plain text placeholders with visually polished empty states that include relevant icons (e.g., from `lucide-react`) and helpful guidance or call-to-actions. Always link `<label>` tags to their corresponding form elements (like `<textarea>`) using matching `htmlFor` and `id` attributes.
+
+## 2024-11-20 - Accessible Custom Select Cards in Settings
+**Learning:** Custom UI selection cards built using `<button>` elements that contain text content generally do not need `aria-label` attributes. Overriding the visible text with an `aria-label` creates an accessibility regression by hiding the descriptive content from screen readers and breaking Voice Control navigation (which relies on matching spoken text to the accessible name). However, these cards strictly require visible focus states for keyboard users.
+**Action:** Always ensure that custom selectable card buttons include `focus-visible` states (e.g., `focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand`). Only add `aria-label`s to custom cards if they completely lack text context (e.g., just an icon or color swatch) or if using `aria-labelledby`/`aria-describedby` is necessary to tie visual text together.
