@@ -173,7 +173,7 @@ export const GlobalSettingsView: React.FC<{
                     key={font.id}
                     onClick={() => setFontFamily(font.id)}
                     className={cn(
-                      "py-2 px-3 rounded text-sm transition-all text-center border",
+                      "py-2 px-3 rounded text-sm transition-all text-center border focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand",
                       font.class,
                       fontFamily === font.id
                         ? "bg-text-bright text-bg-deep border-text-bright font-bold"
@@ -210,7 +210,7 @@ export const GlobalSettingsView: React.FC<{
                     key={bg.id}
                     onClick={() => setChordBackground(bg.id)}
                     className={cn(
-                      "flex flex-col items-center gap-2 p-3 rounded-xl border transition-all text-center",
+                      "flex flex-col items-center gap-2 p-3 rounded-xl border transition-all text-center focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand",
                       chordBackground === bg.id
                         ? "bg-brand/5 border-brand ring-1 ring-brand"
                         : "bg-text-bright/5 border-border-main hover:border-brand/40",
@@ -248,7 +248,7 @@ export const GlobalSettingsView: React.FC<{
                       performanceNotes: true,
                     });
                   }}
-                  className="py-2 px-3 rounded text-sm transition-all text-left border border-text-bright/10 bg-text-bright/5 hover:bg-text-bright/10 flex flex-col gap-1"
+                  className="py-2 px-3 rounded text-sm transition-all text-left border border-text-bright/10 bg-text-bright/5 hover:bg-text-bright/10 flex flex-col gap-1 focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand"
                 >
                   <span className="font-bold text-text-bright">
                     Instrumentista / Pro
@@ -269,7 +269,7 @@ export const GlobalSettingsView: React.FC<{
                       performanceNotes: true,
                     });
                   }}
-                  className="py-2 px-3 rounded text-sm transition-all text-left border border-text-bright/10 bg-text-bright/5 hover:bg-text-bright/10 flex flex-col gap-1"
+                  className="py-2 px-3 rounded text-sm transition-all text-left border border-text-bright/10 bg-text-bright/5 hover:bg-text-bright/10 flex flex-col gap-1 focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand"
                 >
                   <span className="font-bold text-brand">Vocalista</span>
                   <span className="text-[10px] text-brand/70">
@@ -421,7 +421,7 @@ export const GlobalSettingsView: React.FC<{
                     key={t.id}
                     onClick={() => setGlobalTheme(t.id as any)}
                     className={cn(
-                      "flex flex-col gap-3 p-4 rounded-xl border transition-all text-left group",
+                      "flex flex-col gap-3 p-4 rounded-xl border transition-all text-left group focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand",
                       globalTheme === t.id
                         ? "bg-brand/5 border-brand ring-1 ring-brand"
                         : "bg-text-bright/5 border-border-main hover:border-text-bright/20",
@@ -470,7 +470,7 @@ export const GlobalSettingsView: React.FC<{
                     key={m.id}
                     onClick={() => setGlobalMode(m.id as any)}
                     className={cn(
-                      "flex items-center gap-4 p-4 rounded-xl border transition-all text-left group",
+                      "flex items-center gap-4 p-4 rounded-xl border transition-all text-left group focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-brand",
                       globalMode === m.id
                         ? "bg-brand/5 border-brand ring-1 ring-brand"
                         : "bg-transparent border-border-main hover:border-brand/40",
