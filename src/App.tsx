@@ -3215,6 +3215,7 @@ export default function App() {
                               }
                               placeholder="Seconds"
                               title="Duration in seconds"
+                              aria-label="Duration in seconds"
                               className="w-full bg-text-bright/5 border border-border-main p-2 text-sm text-brand font-mono rounded outline-none focus:border-brand"
                             />
                           </div>
