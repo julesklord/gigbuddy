@@ -60,6 +60,7 @@ export const UserConfigView: React.FC<{
             )}
             <button
               type="button"
+              aria-label="Update profile photo"
               onClick={() => document.getElementById('profile-photo')?.focus()}
               className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-2 focus-visible:outline-none flex items-center justify-center transition-opacity text-xs font-mono font-bold uppercase tracking-widest text-brand"
             >
