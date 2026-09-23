@@ -55,3 +55,7 @@
 ## 2024-11-20 - Enhanced Empty States and Missing Textarea Labels
 **Learning:** Plain text empty states (e.g., "No songs in library") feel unpolished and lack guidance. Additionally, the Advanced Mode JSON textarea lacked an explicitly associated label for screen readers.
 **Action:** When displaying empty states for lists or libraries, replace plain text placeholders with visually polished empty states that include relevant icons (e.g., from `lucide-react`) and helpful guidance or call-to-actions. Always link `<label>` tags to their corresponding form elements (like `<textarea>`) using matching `htmlFor` and `id` attributes.
+## 2024-11-20 - Explicit ARIA Labels for Icon-Only Update Buttons
+
+**Learning:** Buttons with minimal text layered over icons or images (like a profile photo update overlay) may lack clear context for screen reader users when removed from their surrounding visual layout.
+**Action:** Always add descriptive `aria-label` attributes to such buttons to ensure full action context (e.g. 'Update profile photo' instead of just relying on visible text 'Update' in an overlay).
