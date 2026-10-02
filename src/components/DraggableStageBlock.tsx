@@ -21,6 +21,7 @@ export const DraggableStageBlock = ({ id, blockInfo, isVisible, toggleVisibility
           className="text-text-dim/50 cursor-grab active:cursor-grabbing p-2 -ml-2"
           onPointerDown={(e) => controls.start(e)}
           style={{ touchAction: 'none' }}
+          aria-hidden="true"
         >
           <GripVertical size={16} />
         </div>
