@@ -55,3 +55,7 @@
 ## 2024-11-20 - Enhanced Empty States and Missing Textarea Labels
 **Learning:** Plain text empty states (e.g., "No songs in library") feel unpolished and lack guidance. Additionally, the Advanced Mode JSON textarea lacked an explicitly associated label for screen readers.
 **Action:** When displaying empty states for lists or libraries, replace plain text placeholders with visually polished empty states that include relevant icons (e.g., from `lucide-react`) and helpful guidance or call-to-actions. Always link `<label>` tags to their corresponding form elements (like `<textarea>`) using matching `htmlFor` and `id` attributes.
+
+## 2024-11-20 - Alt Text for Informative Images
+**Learning:** Images that provide context or represent data (like user avatars or video thumbnails) often either lack an `alt` attribute entirely or use an empty `alt=""`. This deprives screen reader users of context that sighted users receive natively.
+**Action:** Always ensure that non-decorative, informative `<img>` elements include meaningful, dynamic `alt` text (e.g., `alt={`${member.displayName}'s profile photo`}`). Leave `alt=""` only for purely decorative elements that screen readers should safely ignore.

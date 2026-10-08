@@ -41,6 +41,7 @@ export const YoutubeSearch: React.FC<YoutubeSearchProps> = ({
               <div className="w-20 h-12 bg-bg-deep rounded overflow-hidden relative border border-white/10 shrink-0">
                 <img
                   src={`https://img.youtube.com/vi/${currentVideoId}/default.jpg`}
+                  alt="Attached video thumbnail"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-bg-deep/30">
@@ -121,7 +122,7 @@ export const YoutubeSearch: React.FC<YoutubeSearchProps> = ({
               <div className="relative w-24 h-14 flex-shrink-0 overflow-hidden rounded-lg border border-white/10 group-hover:border-[#FF0000]/30 transition-colors">
                 <img
                   src={video.thumbnail}
-                  alt=""
+                  alt={`Thumbnail for ${video.title}`}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-bg-deep/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-[2px]">
