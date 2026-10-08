@@ -200,7 +200,7 @@ export const BandConfigView: React.FC<{
               <div key={member.uid} className="bg-text-bright/5 border border-border-main p-4 rounded-2xl flex items-center justify-between group hover:border-brand/40 transition-colors">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-text-bright/5 overflow-hidden border border-border-main">
-                    {member.photoURL ? <img src={member.photoURL} alt="" className="w-full h-full object-cover" /> : <UserCircle size={40} className="text-text-bright/10" />}
+                    {member.photoURL ? <img src={member.photoURL} alt={`${member.displayName}'s profile`} className="w-full h-full object-cover" /> : <UserCircle size={40} className="text-text-bright/10" />}
                   </div>
                   <div>
                     <div className="text-sm font-bold flex items-center gap-2">
